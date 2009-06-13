@@ -4,7 +4,7 @@
  </tr>
  <tr>
   <td class="leftb">{lang:all}</td>
-  <td class="rightb" colspan="2">{pages:list}</td>
+  <td class="rightb">{pages:list}</td>
  </tr>
  <tr>
   <td class="leftb" colspan="2">{lang:select}

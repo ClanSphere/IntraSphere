@@ -108,17 +108,9 @@ if(!empty($error) OR !isset($_POST['submit'])) {
   $cs_languests['languests_status'] == 4 ? $sel[4] = 1 : $sel[4] = 0;
   $cs_languests['languests_status'] == 5 ? $sel[5] = 1 : $sel[5] = 0;
 
-  if($cs_languests['languests_status'] == 3) {
-    $data['select']['3'] = 'selected="selected"';
-  }
-  
-  if($cs_languests['languests_status'] == 4) {
-    $data['select']['4'] = 'selected="selected"';
-  }
-  
-  if($cs_languests['languests_status'] == 5) {
-    $data['select']['5'] = 'selected="selected"';
-  }
+  $data['select']['3'] = $cs_languests['languests_status'] == 3 ? 'selected="selected"' : '';
+  $data['select']['4'] = $cs_languests['languests_status'] == 4 ? 'selected="selected"' : '';
+  $data['select']['5'] = $cs_languests['languests_status'] == 5 ? 'selected="selected"' : '';
 
   $data['languests']['money'] = $cs_languests['languests_money'];
   $data['languests']['paytime'] = cs_dateselect('pay','unix',$cs_languests['languests_paytime']);

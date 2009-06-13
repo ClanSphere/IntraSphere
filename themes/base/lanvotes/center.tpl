@@ -4,7 +4,7 @@
  </tr>
  <tr>
   <td class="leftb">{lang:body_center}</td>
-  <td class="rightb" colspan="2">{lang:link}</td>
+  <td class="rightb">{lang:link}</td>
  </tr>
  <tr>
   <td class="leftb" colspan="2">{lang:select_lan}

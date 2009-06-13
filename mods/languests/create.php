@@ -105,11 +105,14 @@ if(!empty($error) OR !isset($_POST['submit'])) {
     $cs_languests['languests_status'] == 5 ? $sel[5] = 1 : $sel[5] = 0;
   }
 
+  $data['select']['3'] = $cs_languests['languests_status'] == 3 ? 'selected="selected"' : '';
+  $data['select']['4'] = $cs_languests['languests_status'] == 4 ? 'selected="selected"' : '';
+  $data['select']['5'] = $cs_languests['languests_status'] == 5 ? 'selected="selected"' : '';
+
   $data['languests']['money'] = $cs_languests['languests_money'];
   $data['languests']['paytime'] = cs_dateselect('pay','unix',$cs_languests['languests_paytime']);
   $data['languests']['notice'] = $cs_languests['languests_notice'];
 
-  
   echo cs_subtemplate(__FILE__,$data,'languests','create');
 }
 else {
