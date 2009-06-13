@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: languests.php 1775 2009-02-17 20:59:11Z duRiel $
 
-$cs_lang['mod']              = 'LAN-G&auml;ste';
-$cs_lang['mod_info']      = 'Verwaltung von LAN-Party-Teilnehmern';
+$cs_lang['mod_name']              = 'LAN-G&auml;ste';
+$cs_lang['modtext']      = 'Verwaltung von LAN-Party-Teilnehmern';
 
 // Create
 $cs_lang['body_create']      = 'Einen neuen Teilnehmer eintragen.';

@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: lanshop.php 1898 2009-03-05 06:12:49Z fay-pain $
 
-$cs_lang['mod']  = 'LAN-Purchase';
-$cs_lang['mod_info']  = 'Manage items and orders';
+$cs_lang['mod_name']  = 'LAN-Purchase';
+$cs_lang['modtext']  = 'Manage items and orders';
 
 // Cashdesk
 $cs_lang['head_cashdesk']  = 'Cashdesk';

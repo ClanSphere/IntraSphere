@@ -1,6 +1,6 @@
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
 	<tr>
-		<td class="headb" colspan="3">{lang:mod} - {lang:cashdesk}</td>
+		<td class="headb" colspan="3">{lang:mod_name} - {lang:cashdesk}</td>
 	</tr>
 	<tr>
 		<td class="leftb"><a href="{url:lanshop_manage}">{lang:manage}</a></td>

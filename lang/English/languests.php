@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: languests.php 1775 2009-02-17 20:59:11Z duRiel $
 
-$cs_lang['mod']              = 'LAN-Guests';
-$cs_lang['mod_info']      = 'Manage LAN-Guests here';
+$cs_lang['mod_name']              = 'LAN-Guests';
+$cs_lang['modtext']      = 'Manage LAN-Guests here';
 
 // Create
 $cs_lang['body_create']      = 'Add new guest.';

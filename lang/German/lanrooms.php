@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: lanrooms.php 1775 2009-02-17 20:59:11Z duRiel $
 
-$cs_lang['mod']  = 'LAN-Sitzplan';
-$cs_lang['mod_info']  = 'Abgetrennte Bereiche erstellen und verwalten';
+$cs_lang['mod_name']  = 'LAN-Sitzplan';
+$cs_lang['modtext']  = 'Abgetrennte Bereiche erstellen und verwalten';
 $cs_lang['lanparty'] = 'LAN-Party';
 
 // Manage

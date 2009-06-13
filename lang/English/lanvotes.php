@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: lanvotes.php 1775 2009-02-17 20:59:11Z duRiel $
 
-$cs_lang['mod']  = 'LAN-Votes';
-$cs_lang['mod_info']  = 'Administration of Votes for LAN-Partys';
+$cs_lang['mod_name']  = 'LAN-Votes';
+$cs_lang['modtext']  = 'Administration of Votes for LAN-Partys';
 
 // Center
 $cs_lang['head_center']  = 'Center';

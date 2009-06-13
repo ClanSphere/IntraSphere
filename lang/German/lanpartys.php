@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: lanpartys.php 1775 2009-02-17 20:59:11Z duRiel $
 
-$cs_lang['mod']         = 'LAN-Partys';
-$cs_lang['mod_info']      = "Verwaltung von Netzwerk-Veranstaltungen";
+$cs_lang['mod_name']         = 'LAN-Partys';
+$cs_lang['modtext']      = "Verwaltung von Netzwerk-Veranstaltungen";
 
 // Center
 $cs_lang['head_center']     = 'Zentrale';

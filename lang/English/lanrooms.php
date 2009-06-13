@@ -2,8 +2,8 @@
 // ClanSphere 2009 - www.clansphere.net
 // $Id: lanrooms.php 1775 2009-02-17 20:59:11Z duRiel $
 
-$cs_lang['mod']  = 'LAN-Seating Plan';
-$cs_lang['mod_info']  = 'Create and manage seperated areas';
+$cs_lang['mod_name']  = 'LAN-Seating Plan';
+$cs_lang['modtext']  = 'Create and manage seperated areas';
 $cs_lang['lanparty'] = 'LAN-Party';
 
 // Manage
