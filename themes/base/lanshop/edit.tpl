@@ -31,7 +31,7 @@
 		</td>
 		<td class="leftc">
 			{abcode:features}
-			<textarea name="lanshop_articles_info" cols="50" rows="6" id="lanshop_articles_info">{data:lanshop_articles_info}</textarea>
+			<textarea class="rte_abcode" name="lanshop_articles_info" cols="50" rows="6" id="lanshop_articles_info">{data:lanshop_articles_info}</textarea>
 		</td>
 	</tr>
 	<tr>

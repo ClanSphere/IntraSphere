@@ -64,31 +64,31 @@
     <tr>
       <td class="leftc">{icon:kwallet2} {lang:bankaccount}</td>
       <td class="leftb">{lanpartys:abcode_bankaccount}<br />
-        <textarea name="lanpartys_bankaccount" cols="50" rows="5" id="lanpartys_bankaccount" >{lanpartys:bankaccount}</textarea>
+        <textarea class="rte_abcode" name="lanpartys_bankaccount" cols="50" rows="5" id="lanpartys_bankaccount" >{lanpartys:bankaccount}</textarea>
       </td>
     </tr>
     <tr>
       <td class="leftc">{icon:network_local} {lang:network}</td>
       <td class="leftb">{lanpartys:abcode_network}<br />
-        <textarea name="lanpartys_network" cols="50" rows="5" id="lanpartys_network" >{lanpartys:network}</textarea>
+        <textarea class="rte_abcode" name="lanpartys_network" cols="50" rows="5" id="lanpartys_network" >{lanpartys:network}</textarea>
       </td>
     </tr>
     <tr>
       <td class="leftc">{icon:joystick} {lang:tournaments}</td>
       <td class="leftb">{lanpartys:abcode_tournaments}<br />
-        <textarea name="lanpartys_tournaments" cols="50" rows="5" id="lanpartys_tournaments" >{lanpartys:tournaments}</textarea>
+        <textarea class="rte_abcode" name="lanpartys_tournaments" cols="50" rows="5" id="lanpartys_tournaments" >{lanpartys:tournaments}</textarea>
       </td>
     </tr>
     <tr>
       <td class="leftc">{icon:whatsnext} {lang:features}</td>
       <td class="leftb">{lanpartys:abcode_features}<br />
-        <textarea name="lanpartys_features" cols="50" rows="8" id="lanpartys_features" >{lanpartys:features}</textarea>
+        <textarea class="rte_abcode" name="lanpartys_features" cols="50" rows="8" id="lanpartys_features" >{lanpartys:features}</textarea>
       </td>
     </tr>
     <tr>
       <td class="leftc">{icon:kate} {lang:more}</td>
       <td class="leftb">{lanpartys:abcode_more}<br />
-        <textarea name="lanpartys_more" cols="50" rows="5" id="lanpartys_more" >{lanpartys:more}</textarea>
+        <textarea class="rte_abcode" name="lanpartys_more" cols="50" rows="5" id="lanpartys_more" >{lanpartys:more}</textarea>
       </td>
     </tr>
     <tr>
