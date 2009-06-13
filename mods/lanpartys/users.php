@@ -1,5 +1,5 @@
 <?php
-// ClanSphere 2008 - www.clansphere.net
+// ClanSphere 2009 - www.clansphere.net
 // $Id: users.php 1852 2009-03-01 21:41:44Z hajo $
 
 $cs_lang = cs_translate('lanpartys');

@@ -1,5 +1,5 @@
 <?php
-// ClanSphere 2008 - www.clansphere.net
+// ClanSphere 2009 - www.clansphere.net
 // $Id: languests.php 1775 2009-02-17 20:59:11Z duRiel $
 
 $cs_lang['mod']              = 'LAN-Guests';

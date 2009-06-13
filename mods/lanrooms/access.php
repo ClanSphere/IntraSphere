@@ -1,5 +1,5 @@
 <?php
-// ClanSphere 2008 - www.clansphere.net
+// ClanSphere 2009 - www.clansphere.net
 // $Id: access.php 1775 2009-02-17 20:59:11Z duRiel $
 
 $axx_file['lanpartys'] = 1;

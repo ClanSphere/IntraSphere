@@ -1,5 +1,5 @@
 <?php
-// ClanSphere 2008 - www.clansphere.net
+// ClanSphere 2009 - www.clansphere.net
 // $Id: lanshop.php 1898 2009-03-05 06:12:49Z fay-pain $
 
 $cs_lang['mod']  = 'LAN-Einkauf';

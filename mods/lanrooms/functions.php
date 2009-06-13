@@ -1,5 +1,5 @@
 <?php
-// ClanSphere 2008 - www.clansphere.net
+// ClanSphere 2009 - www.clansphere.net
 // $Id: functions.php 1805 2009-02-22 12:04:16Z fay-pain $
 
 function cs_lanroom($mod,$action,$lanrooms_id,$lanroomd_id = 0,$free = 0) {

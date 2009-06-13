@@ -1,5 +1,5 @@
 <?php
-// ClanSphere 2008 - www.clansphere.net
+// ClanSphere 2009 - www.clansphere.net
 // $Id: map.php 1805 2009-02-22 12:04:16Z fay-pain $
 
 $cs_lang = cs_translate('lanrooms');
