@@ -13,6 +13,7 @@ $mod_info['url']        = 'www.clansphere.net';
 $mod_info['text']      = $cs_lang['modtext'];
 $mod_info['icon']       = 'package_games_arcade';
 $mod_info['show']       = array('clansphere/admin' => 3,'users/settings' => 2,'lanpartys/view' => 1);
+$mod_info['references'] = array('lanpartys' => 'lanvotes');
 $mod_info['categories'] = FALSE;
 $mod_info['comments']  = FALSE;
 $mod_info['protected']  = FALSE;

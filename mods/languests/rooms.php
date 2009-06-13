@@ -59,7 +59,7 @@ else {
 }
 
 
-$data['url']['form']= cs_url('lanpartys','rooms');
+$data['url']['form']= cs_url('languests','rooms');
 $where = "lanpartys_id = '" . $lanpartys_id . "'";
 $room_data = cs_sql_select(__FILE__,'lanrooms','lanrooms_name, lanrooms_id',$where,'lanrooms_name',0,0);
 $room_data_loop = count($room_data);
