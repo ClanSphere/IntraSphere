@@ -7,18 +7,15 @@ $cs_lang = cs_translate('lanpartys');
 $op_lanpartys = cs_sql_option(__FILE__,'lanpartys');
 
 if(isset($_POST['submit'])) {
-  settype($_POST['max_width'],'integer');
-  settype($_POST['max_height'],'integer');
-  settype($_POST['max_size'],'integer');
 
-  $opt_where = "options_mod = 'lanpartys' AND options_name = ";
-  $def_cell = array('options_value');
-  $def_cont = array($_POST['max_width']);
-  cs_sql_update(__FILE__,'options',$def_cell,$def_cont,0,$opt_where . "'max_width'");
-  $def_cont = array($_POST['max_height']);
-  cs_sql_update(__FILE__,'options',$def_cell,$def_cont,0,$opt_where . "'max_height'");
-  $def_cont = array($_POST['max_size']);
-  cs_sql_update(__FILE__,'options',$def_cell,$def_cont,0,$opt_where . "'max_size'");
+  require_once 'mods/clansphere/func_options.php';
+  $save = array();
+
+  $save['max_width'] = (int) $_POST['max_width'];
+  $save['max_height'] = (int) $_POST['max_height'];
+  $save['max_size'] = (int) $_POST['max_size'];
+
+  cs_optionsave('lanpartys', $save);
 
   cs_redirect($cs_lang['changes_done'],'lanpartys','options');
 }
