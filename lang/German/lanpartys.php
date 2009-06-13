@@ -150,4 +150,3 @@ $cs_lang['mail_end']      = "\n\nBis zur LAN, dein Orga-Team";
 
 // Remove
 $cs_lang['head_remove']     = 'Entfernen';
-?>

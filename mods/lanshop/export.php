@@ -50,5 +50,3 @@ $data['stats']['value'] = $lanshop_value;
 $data['stats']['time'] = cs_date('unix',cs_time(),1);
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','export');
-
-?>

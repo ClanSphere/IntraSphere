@@ -67,5 +67,3 @@ for($run=0; $run<$lanshop_loop; $run++) {
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','center');
-
-?>

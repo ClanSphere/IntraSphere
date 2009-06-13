@@ -73,4 +73,3 @@ function cs_lanroom($mod,$action,$lanrooms_id,$lanroomd_id = 0,$free = 0) {
   }
   return cs_subtemplate(__FILE__,$data,'lanrooms','functions');
 }
-?>

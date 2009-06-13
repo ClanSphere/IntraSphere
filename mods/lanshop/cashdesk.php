@@ -83,5 +83,3 @@ for($run = 0; $run < $lanshop_loop; $run++) {
 $data['bottom']['body'] = sprintf($cs_lang['money_all'],$money / 100);
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','cashdesk');
-
-?>

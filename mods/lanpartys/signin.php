@@ -47,5 +47,3 @@ else {
 }
   
 cs_redirect($msg,'lanpartys','center');
-
-?>

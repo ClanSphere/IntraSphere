@@ -27,4 +27,3 @@ if(!empty($languests_form)) {
   
   echo cs_subtemplate(__FILE__,$data,'languests','remove');
 }
-?>

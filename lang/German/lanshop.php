@@ -61,5 +61,3 @@ $cs_lang['ordered_items'] = 'Bestellte Artikel: %s';
 // View
 $cs_lang['head_view']  = 'Details';
 $cs_lang['body_view']  = 'Weitere Informationen zu einem Artikel.';
-
-?>

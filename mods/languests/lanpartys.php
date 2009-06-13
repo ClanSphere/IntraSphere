@@ -70,5 +70,3 @@ for($run=0; $run<$languests_loop; $run++) {
 }
 
 echo cs_subtemplate(__FILE__,$data,'languests','lanpartys');
-
-?>

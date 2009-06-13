@@ -51,5 +51,3 @@ $data['lanpartys']['features'] = cs_secure($cs_lanpartys['lanpartys_features'],1
 $data['lanpartys']['more'] = cs_secure($cs_lanpartys['lanpartys_more'],1);
 
 echo cs_subtemplate(__FILE__,$data,'lanpartys','view');
-
-?>

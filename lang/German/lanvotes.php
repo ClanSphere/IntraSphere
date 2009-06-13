@@ -79,6 +79,3 @@ $cs_lang['election']  = 'Antwort';
 $cs_lang['graphic']    = 'Balken';
 $cs_lang['percent']    = 'Prozent';
 $cs_lang['count']      = 'Stimmen';
-
-
-?>

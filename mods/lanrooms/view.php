@@ -24,4 +24,3 @@ include('mods/lanrooms/functions.php');
 $data['lan']['map'] = cs_lanroom('lanrooms','view',$lanrooms_id,$lanroomd_id);
 
 echo cs_subtemplate(__FILE__,$data,'lanrooms','view');
-?>

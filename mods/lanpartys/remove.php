@@ -28,4 +28,3 @@ if(!empty($lanpartys_form)) {
   
   echo cs_subtemplate(__FILE__,$data,'lanpartys','remove');
 }
-?>

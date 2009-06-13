@@ -32,4 +32,3 @@ if(!empty($lanvotes_form)) {
   
   echo cs_subtemplate(__FILE__,$data,'lanvotes','remove');
 }
-?>

@@ -74,5 +74,3 @@ $cs_lang['used'] = 'Reserved by %s';
 // Edit
 $cs_lang['head_edit']  = 'Edit';
 $cs_lang['body_edit']  = 'Occured errors are displayed here.';
-
-?>

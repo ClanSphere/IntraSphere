@@ -92,4 +92,3 @@ include('mods/lanrooms/functions.php');
 $data['languests']['map'] =  cs_lanroom('languests','rooms',$lanrooms_id,$lanparty['lanroomd_id'],$free);
 
 echo cs_subtemplate(__FILE__,$data,'languests','rooms');
-?>

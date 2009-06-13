@@ -86,4 +86,3 @@ else {
   cs_redirect($cs_lang['elect_done'],'lanvotes','manage');
   }
 }
-?>

@@ -53,4 +53,3 @@ $cs_lang['no_party']        = '- LAN-Party not found';
 $cs_lang['no_guest']        = '- Guest not found';
 $cs_lang['target_used']     = '- Chair is already in use';
 $cs_lang['target_denied']   = '- Guest has wrong or no status';
-?>

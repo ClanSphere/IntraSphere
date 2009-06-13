@@ -25,5 +25,3 @@ $data['ls']['info'] = cs_secure($cs_lanshop['lanshop_articles_info'],1,1);
 
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','view');
-
-?>

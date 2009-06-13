@@ -53,4 +53,3 @@ $cs_lang['no_party']        = '- Die LAN-Party wurde nicht gefunden';
 $cs_lang['no_guest']        = '- Der Gast wurde nicht gefunden';
 $cs_lang['target_used']     = '- Der Platz ist bereits vergeben';
 $cs_lang['target_denied']   = '- Der Gast hat keinen oder den falschen Status';
-?>

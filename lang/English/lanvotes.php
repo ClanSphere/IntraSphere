@@ -74,5 +74,3 @@ $cs_lang['election']  = 'Answer';
 $cs_lang['graphic']    = 'Bar';
 $cs_lang['percent']    = 'Percent';
 $cs_lang['count']      = 'Votes';
-
-?>

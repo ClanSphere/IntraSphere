@@ -50,4 +50,3 @@ for($run=0; $run<$lanrooms_loop; $run++) {
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanrooms','list');
-?>

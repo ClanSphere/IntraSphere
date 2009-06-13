@@ -74,5 +74,3 @@ $cs_lang['used'] = 'Reserviert von %s';
 // Edit
 $cs_lang['head_edit']  = 'Bearbeiten';
 $cs_lang['body_edit']  = 'Hier erscheinen etwaige Fehler nach dem Absenden.';
-
-?>

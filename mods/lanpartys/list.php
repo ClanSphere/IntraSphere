@@ -42,5 +42,3 @@ for($run=0; $run<$lanpartys_loop; $run++) {
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanpartys','list');
-
-?>

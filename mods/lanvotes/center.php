@@ -61,4 +61,3 @@ for($run=0; $run<$lanvotes_loop; $run++) {
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanvotes','center');
-?>

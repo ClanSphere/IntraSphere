@@ -101,4 +101,3 @@ for($run=0; $run<$lanroomd_loop; $run++) {
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanrooms','map');
-?>

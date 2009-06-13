@@ -102,5 +102,3 @@ echo cs_subtemplate(__FILE__,$data,'lanrooms','lanpartys');
 
 include('mods/lanrooms/functions.php');
 echo cs_lanroom('lanrooms','lanpartys',$lanrooms_id,$target['lanroomd_id'],$free);
-
-?>
