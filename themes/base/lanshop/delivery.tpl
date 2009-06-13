@@ -12,7 +12,7 @@
 
 {head:getmsg}
 
-<form method="post" name="lanshop_delivery" action="{url:lanshop_delivery}">
+<form method="post" id="lanshop_delivery" action="{url:lanshop_delivery}">
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
 	<tr>
 		<td class="leftc">{icon:folder_yellow} {lang:category}</td>

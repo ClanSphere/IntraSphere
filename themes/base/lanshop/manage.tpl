@@ -9,7 +9,7 @@
 	</tr>
 	<tr>
 		<td class="leftb" colspan="2">{lang:category}
-			<form method="post" name="lanshop_manage" action="{url:lanshop_manage}">
+			<form method="post" id="lanshop_manage" action="{url:lanshop_manage}">
 				{head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
 			</form>

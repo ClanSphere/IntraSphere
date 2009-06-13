@@ -7,7 +7,7 @@
   </tr>
 </table>
 <br />
-<form method="post" name="lanpartys_create" action="{url:form}">
+<form method="post" id="lanpartys_create" action="{url:form}">
   <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
     <tr>
       <td class="leftc">{icon:connect_to_network} {lang:name} *</td>
@@ -94,7 +94,6 @@
     <tr>
       <td class="leftc">{icon:ksysguard} {lang:options}</td>
       <td class="leftb"><input type="submit" name="submit" value="{lang:create}" />
-        <input type="reset" name="reset" value="{lang:reset}" />
       </td>
     </tr>
   </table>

@@ -8,7 +8,7 @@
 </table>
 <br />
 {lang:getmsg}
-<form method="post" name="lanpartys_options" action="{url:form}">
+<form method="post" id="lanpartys_options" action="{url:form}">
   <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
     <tr>
       <td class="leftc">{icon:resizecol} {lang:max_width}</td>
@@ -28,7 +28,6 @@
     <tr>
       <td class="leftc">{icon:ksysguard} {lang:options}</td>
       <td class="leftb"><input type="submit" name="submit" value="{lang:edit}" />
-        <input type="reset" name="reset" value="{lang:reset}" />
       </td>
     </tr>
   </table>

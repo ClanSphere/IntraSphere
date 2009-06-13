@@ -9,7 +9,7 @@
  </tr>
  <tr>
   <td class="leftb" colspan="3">{lang:select_lan}
-    <form method="post" name="lanrooms_manage" action="{url:form}">
+    <form method="post" id="lanrooms_manage" action="{url:form}">
       <select name="lanpartys_id" >
         <option value="0">----</option>
         {loop:lan}

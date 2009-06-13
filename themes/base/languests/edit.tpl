@@ -7,7 +7,7 @@
   </tr>
 </table>
 <br />
-<form method="post" name="languests_edit" action="{url:form}">
+<form method="post" id="languests_edit" action="{url:form}">
   <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
     <tr>
       <td class="leftc">{icon:connect_to_network} {lang:lanparty} *</td>
@@ -63,7 +63,6 @@
       <td class="leftc">{icon:ksysguard} {lang:options}</td>
       <td class="leftb"><input type="hidden" name="id" value="{data:id}" />
         <input type="submit" name="submit" value="{lang:edit}" />
-        <input type="reset" name="reset" value="{lang:reset}" />
       </td>
     </tr>
   </table>

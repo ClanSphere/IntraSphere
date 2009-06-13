@@ -7,7 +7,7 @@
   </tr>
 </table>
 <br />
-<form method="post" name="lanpartys_edit" action="{url:form}">
+<form method="post" id="lanpartys_edit" action="{url:form}">
   <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
     <tr>
       <td class="leftc">{icon:connect_to_network} {lang:name} *</td>
@@ -96,7 +96,6 @@
 
       <td class="leftb"><input type="hidden" name="id" value="{data:id}" />
  <input type="submit" name="submit" value="{lang:edit}" />
- <input type="reset" name="reset" value="{lang:reset}" />
       </td>
     </tr>
   </table>

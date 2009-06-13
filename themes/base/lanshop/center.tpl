@@ -8,7 +8,7 @@
 	</tr>
 	<tr>
 		<td class="leftb">{lang:category}
-			<form method="post" name="lanshop_center" action="{url:lanshop_center}">
+			<form method="post" id="lanshop_center" action="{url:lanshop_center}">
 				{head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
 			</form>
@@ -31,7 +31,7 @@
 		<td class="leftc"><a href="{url:lanshop_view:id={articles:id}}">{articles:name}</a></td>
 		<td class="leftc">{articles:price}</td>
 		<td class="leftc">
-			<form method="post" name="lanshop_center{articles:id}" action="{url:lanshop_center}">
+			<form method="post" id="lanshop_center{articles:id}" action="{url:lanshop_center}">
 				<input type="text" name="lanshop_orders_value" value="1" maxlength="4" size="4" />
 				<input type="hidden" name="lanshop_articles_id" value="{articles:id}" />
 				<input type="submit" name="submit" value="{lang:order}" />

@@ -9,7 +9,7 @@
 
 <br />
 
-<form method="post" name="lanvotes_elect" action="{url:form}">
+<form method="post" id="lanvotes_elect" action="{url:form}">
   <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
     <tr>
       <td class="leftb" style="width:140px">{icon:kate} {lang:question}</td>

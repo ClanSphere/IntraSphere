@@ -9,7 +9,7 @@
 	</tr>
 	<tr>
 		<td class="leftc" colspan="3">{lang:category}
-			<form method="post" name="lanshop_export" action="{url:lanshop_export}">
+			<form method="post" id="lanshop_export" action="{url:lanshop_export}">
 				{head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
 			</form>

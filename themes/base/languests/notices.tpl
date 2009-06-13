@@ -9,7 +9,7 @@
   </tr>
   <tr>
     <td class="leftb" colspan="2"> {lang:select_lan}
-      <form method="post" name="languests_notices" action="{url:form}">
+      <form method="post" id="languests_notices" action="{url:form}">
         <select name="where" >
           <option value="0">----</option>
           {loop:lanpartys}

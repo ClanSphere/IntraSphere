@@ -8,7 +8,7 @@
 </table>
 <br />
 
-<form method="post" name="lanshop_edit" action="{url:lanshop_edit}">
+<form method="post" id="lanshop_edit" action="{url:lanshop_edit}">
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
 	<tr>
 		<td class="leftb">{icon:folder_yellow} {lang:category} *</td>
@@ -39,7 +39,6 @@
 		<td class="leftc">
 			<input type="hidden" name="id" value="{lanshop:id}" />
 			<input type="submit" name="submit" value="{lang:edit}"/>
-			<input type="reset" name="reset" value="{lang:reset}"/>
 		</td>
 	</tr>
 </table>

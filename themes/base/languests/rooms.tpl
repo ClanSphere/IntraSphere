@@ -3,7 +3,7 @@
     <td class="headb">{lang:mod} - {lang:head_rooms}</td>
   </tr>
   <tr>
-    <td class="leftb"><form method="post" name="lanpartys_rooms" action="{url:form}">
+    <td class="leftb"><form method="post" id="lanpartys_rooms" action="{url:form}">
         {lang:area}
         <select name="lanrooms_id" >
           <option value="0">----</option>

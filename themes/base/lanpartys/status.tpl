@@ -5,7 +5,7 @@
   </tr>
   <tr>
     <td class="leftc">{icon:kdmconfig} {lang:team}</td>
-    <td class="leftb"><form method="post" name="lanpartys_status" action="{url:form}">
+    <td class="leftb"><form method="post" id="lanpartys_status" action="{url:form}">
         <input type="text" name="languests_team" value="{lanpartys:team}" maxlength="20" size="20"  />
         <input type="hidden" name="id" value="{data:id}" />
         <input type="submit" name="submit" value="{lang:change}" />

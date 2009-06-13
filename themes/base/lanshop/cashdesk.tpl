@@ -10,7 +10,7 @@
 </table>
 <br />
 
-<form method="post" name="lanshop_cashdesk" action="{url:lanshop_cashdesk}">
+<form method="post" id="lanshop_cashdesk" action="{url:lanshop_cashdesk}">
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
 	<tr>
 		<td class="leftc">{lang:user}</td>

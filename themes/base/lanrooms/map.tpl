@@ -11,7 +11,7 @@
 {lan:map}
 
 <br />
-<form method="post" name="lanrooms_map" action="{url:form}">
+<form method="post" id="lanrooms_map" action="{url:form}">
   <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
     <tr>
       <td class="headb">{lang:number}</td>

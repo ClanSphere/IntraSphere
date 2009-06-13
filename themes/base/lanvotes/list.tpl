@@ -8,7 +8,7 @@
  </tr>
  <tr>
   <td class="leftb" colspan="2">{lang:select}
-    <form method="post" name="lanvotes_list" action="{url:form}">
+    <form method="post" id="lanvotes_list" action="{url:form}">
       <select name="lanpartys_id" >
         <option value="0">----</option>
         {loop:lanpartys}
