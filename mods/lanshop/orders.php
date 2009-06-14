@@ -54,6 +54,7 @@ $cs_lanshop = cs_sql_select(__FILE__,$from,$select,$where,$order,$start,$account
 $lanshop_loop = count($cs_lanshop);
 
 $money = 0;
+$data['orders'] = array();
 
 for($run=0; $run<$lanshop_loop; $run++) {
 

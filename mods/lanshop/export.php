@@ -27,6 +27,7 @@ $lanshop_price = 0;
 $lanshop_value = 0;
 $users_id = 0;
 
+$data['orders'] = array();
 
 for($run = 0; $run < $lanshop_loop; $run++) {
 
