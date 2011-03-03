@@ -5,8 +5,8 @@
 $cs_lang = cs_translate('lanpartys');
 
 $mod_info['name']      = $cs_lang['mod_name'];
-$mod_info['version']    = $cs_main['version_name'];
-$mod_info['released']   = $cs_main['version_date'];
+$mod_info['version']    = '2011.0';
+$mod_info['released']   = '2011-03-03';
 $mod_info['creator']  = 'hajo';
 $mod_info['team']      = 'ClanSphere';
 $mod_info['url']        = 'www.clansphere.net';

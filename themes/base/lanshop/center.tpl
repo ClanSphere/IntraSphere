@@ -7,10 +7,12 @@
 		<td class="rightb">{head:pages}</td>
 	</tr>
 	<tr>
-		<td class="leftb">{lang:category}
+		<td class="leftb">
 			<form method="post" id="lanshop_center" action="{url:lanshop_center}">
-				{head:cat_dropdown}
+      <fieldset style="border: 0; padding: 0">
+				{lang:category} {head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
+        </fieldset>
 			</form>
 		</td>
 		<td class="rightb"><a href="{url:lanshop_orders}">{lang:orders}</a></td>
@@ -32,9 +34,11 @@
 		<td class="leftc">{articles:price}</td>
 		<td class="leftc">
 			<form method="post" id="lanshop_center{articles:id}" action="{url:lanshop_center}">
+      <fieldset style="border: 0; padding: 0">
 				<input type="text" name="lanshop_orders_value" value="1" maxlength="4" size="4" />
 				<input type="hidden" name="lanshop_articles_id" value="{articles:id}" />
 				<input type="submit" name="submit" value="{lang:order}" />
+        </fieldset>
 			</form>
 		</td>
 	</tr>

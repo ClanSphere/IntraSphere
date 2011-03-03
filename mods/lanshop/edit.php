@@ -52,7 +52,7 @@ if(!empty($error) OR !isset($_POST['submit'])) {
 	$data['data'] = $cs_lanshop;
 
   $data['ls']['categories'] = cs_categories_dropdown('lanshop',$cs_lanshop['categories_id']);
-  $data['ls']['price'] = sprintf($cs_lang['cost'],$cs_lanshop['lanshop_articles_price'] / 100);
+  $data['ls']['price'] = sprintf($cs_lang['cost_cent'],$cs_lanshop['lanshop_articles_price'] / 100);
 
   $data['abcode']['smileys'] = cs_abcode_smileys('lanshop_articles_info');
   $data['abcode']['features'] = cs_abcode_features('lanshop_articles_info');

@@ -7,10 +7,12 @@
 		<td class="rightb">{head:pages}</td>
 	</tr>
 	<tr>
-		<td class="leftb">{lang:category}
+		<td class="leftb">
 			<form method="post" id="lanshop_orders" action="{url:lanshop_orders}">
-				{head:cat_dropdown}
+      <fieldset style="border: 0; padding: 0">
+				{lang:category} {head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
+        </fieldset>
 			</form>
 		</td>
 		<td class="rightb"><a href="{url:lanshop_center}">{lang:center}</a></td>

@@ -1,24 +1,24 @@
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
 	<tr>
-		<td class="headb" colspan="3">{lang:mod_name} - {lang:manage}</td>
+		<td class="headb" colspan="2">{lang:mod_name} - {lang:manage}</td>
 	</tr>
 	<tr>
-		<td class="leftb">{icon:editpaste} <a href="{url:lanshop_create}">{lang:new_article}</a></td>
 		<td class="leftb">{icon:contents} {lang:total}: {head:count}</td>
 		<td class="rightb">{head:pages}</td>
 	</tr>
 	<tr>
-		<td class="leftb" colspan="2">{lang:category}
+		<td class="leftb">
 			<form method="post" id="lanshop_manage" action="{url:lanshop_manage}">
-				{head:cat_dropdown}
+      <fieldset style="border: 0; padding: 0">
+				{lang:category} {head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
-			</form>
+        </fieldset>
+        </form>
 		</td>
 		<td class="rightb"><a href="{url:lanshop_cashdesk}">{lang:cashdesk}</a></td>
 	</tr>
 </table>
 <br />
-
 {head:getmsg}
 
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">

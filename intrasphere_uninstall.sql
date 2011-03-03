@@ -6,3 +6,5 @@ DROP TABLE {pre}_lanshop_articles;
 DROP TABLE {pre}_lanshop_orders;
 DROP TABLE {pre}_lanvoted;
 DROP TABLE {pre}_lanvotes;
+
+DELETE FROM {pre}_options WHERE options_mod = 'lanpartys';

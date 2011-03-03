@@ -8,10 +8,12 @@
 		<td class="rightb"><a href="{url:lanshop_cashdesk}">{lang:cashdesk}</a></td>
 	</tr>
 	<tr>
-		<td class="leftc" colspan="3">{lang:category}
+		<td class="leftc" colspan="3">
 			<form method="post" id="lanshop_export" action="{url:lanshop_export}">
-				{head:cat_dropdown}
+      <fieldset style="border: 0; padding: 0">
+				{lang:category} {head:cat_dropdown}
 				<input type="submit" name="submit" value="{lang:show}" />
+        </fieldset>
 			</form>
 		</td>
 	</tr>
