@@ -26,12 +26,12 @@
 	<tr>
 		<td class="headb">{sort:name} {lang:name}</td>
 		<td class="headb">{sort:price} {lang:price}</td>
-		<td class="headb">Warenkorb</td>
+		<td class="headb">{lang:value}</td>
 	</tr>
 	{loop:articles}
 	<tr>
 		<td class="leftc"><a href="{url:lanshop_view:id={articles:id}}">{articles:name}</a></td>
-		<td class="leftc">{articles:price}</td>
+		<td class="rightc">{articles:price}</td>
 		<td class="leftc">
 			<form method="post" id="lanshop_center{articles:id}" action="{url:lanshop_center}">
       <fieldset style="border: 0; padding: 0">

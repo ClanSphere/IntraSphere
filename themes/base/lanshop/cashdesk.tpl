@@ -3,9 +3,9 @@
 		<td class="headb" colspan="3">{lang:mod_name} - {lang:cashdesk}</td>
 	</tr>
 	<tr>
-		<td class="leftb"><a href="{url:lanshop_manage}">{lang:manage}</a></td>
+		<td class="leftb" style="width:30%"><a href="{url:lanshop_manage}">{lang:manage}</a></td>
 		<td class="centerb"><a href="{url:lanshop_delivery}">{lang:delivery}</a></td>
-		<td class="rightb"><a href="{url:lanshop_export}">{lang:export}</a></td>
+		<td class="rightb" style="width:30%"><a href="{url:lanshop_export}">{lang:export}</a></td>
 	</tr>
 </table>
 <br />
@@ -50,9 +50,9 @@
 		<td class="leftc">{orders:article}</td>
 		<td class="leftc">{orders:status}</td>
 		<td class="leftc">{orders:pay_id}</td>
-		<td class="leftc">{orders:value}</td>
-		<td class="leftc">{orders:remove_id}</td>
-		<td class="leftc">{orders:cost}</td>
+		<td class="rightc">{orders:value}</td>
+		<td class="centerc">{orders:remove_id}</td>
+		<td class="rightc">{orders:cost}</td>
 	</tr>
 	{stop:orders}
 </table>

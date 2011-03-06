@@ -3,9 +3,9 @@
 		<td class="headb" colspan="3">{lang:mod_name} - {lang:head_delivery}</td>
 	</tr>
 	<tr>
-		<td class="leftb"><a href="{url:lanshop_manage}">{lang:manage}</a></td>
+		<td class="leftb" style="width:30%"><a href="{url:lanshop_manage}">{lang:manage}</a></td>
 		<td class="centerb"><a href="{url:lanshop_export}">{lang:export}</a></td>
-		<td class="rightb"><a href="{url:lanshop_cashdesk}">{lang:cashdesk}</a></td>
+		<td class="rightb" style="width:30%"><a href="{url:lanshop_cashdesk}">{lang:cashdesk}</a></td>
 	</tr>
 </table>
 <br />

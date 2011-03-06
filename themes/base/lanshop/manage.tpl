@@ -30,9 +30,9 @@
 	{loop:articles}
 	<tr>
 		<td class="leftc"><a href="{url:lanshop_view:id={articles:id}}">{articles:name}</a></td>
-		<td class="leftc">{articles:price}</td>
-		<td class="leftc"><a href="{url:lanshop_edit:id={articles:id}}" title="{lang:edit}">{icon:edit}</a></td>
-		<td class="leftc"><a href="{url:lanshop_remove:id={articles:id}}" title="{lang:remove}">{icon:editdelete}</a></td>
+		<td class="rightc">{articles:price}</td>
+		<td class="centerc"><a href="{url:lanshop_edit:id={articles:id}}" title="{lang:edit}">{icon:edit}</a></td>
+		<td class="centerc"><a href="{url:lanshop_remove:id={articles:id}}" title="{lang:remove}">{icon:editdelete}</a></td>
 	</tr>
 	{stop:articles}
 </table>

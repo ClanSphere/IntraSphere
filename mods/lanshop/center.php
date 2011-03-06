@@ -21,12 +21,12 @@ settype($value,'integer');
 if(!empty($article) AND !empty($value)) {
   $order_cells = array('users_id', 'lanshop_articles_id', 'lanshop_orders_since', 'lanshop_orders_value', 'lanshop_orders_status');
   $order_save = array($account['users_id'], $article, cs_time(), $value, 1);
- cs_sql_insert(__FILE__,'lanshop_orders',$order_cells,$order_save);
+  cs_sql_insert(__FILE__,'lanshop_orders',$order_cells,$order_save);
 
   $get_art = "lanshop_articles_id = '" . $article . "'";
   $fetch = cs_sql_select(__FILE__,'lanshop_articles','categories_id',$get_art);
   $categories_id = $fetch['categories_id'];
- cs_redirect($cs_lang['order_done'],'lanshop','center');
+  cs_redirect($cs_lang['order_done'],'lanshop','center', 'where=' . $categories_id);
 }
 else {
 	$categories_id = empty($cs_get['where']) ? 0 : $cs_get['where'];
@@ -57,13 +57,11 @@ $select = 'lanshop_articles_name, lanshop_articles_price, lanshop_articles_id';
 $data['articles'] = cs_sql_select(__FILE__,'lanshop_articles',$select,$where,$order,$start,$account['users_limit']);
 $lanshop_loop = count($data['articles']);
 
-
 for($run=0; $run<$lanshop_loop; $run++) {
 
   $data['articles'][$run]['id'] = $data['articles'][$run]['lanshop_articles_id'];
   $data['articles'][$run]['name'] = cs_secure($data['articles'][$run]['lanshop_articles_name']);
 	$data['articles'][$run]['price'] = $data['articles'][$run]['lanshop_articles_price'] / 100 . ' ' . $cs_lang['cost'];
-
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','center');
