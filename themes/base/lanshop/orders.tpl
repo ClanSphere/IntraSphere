@@ -23,7 +23,7 @@
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
 	<tr>
 		<td class="headb">{sort:name} {lang:name}</td>
-		<td class="headb">{lang:status}</td>
+		<td class="headb">{sort:status} {lang:status}</td>
 		<td class="headb" colspan="2">{lang:value}</td>
 		<td class="headb">{sort:price} {lang:money}</td>
 	</tr>
@@ -32,7 +32,7 @@
 		<td class="leftc"><a href="/debug/lanshop/view/id/1">{orders:articles_name}</a></td>
 		<td class="leftc">{orders:status}</td>
 		<td class="rightc">{orders:value}</td>
-		<td class="centerc"><a href="{url:lanshop_orders:remove_id={orders:id}}" title="{lang:remove}">{icon:editdelete}</a></td>
+		<td class="centerc">{orders:remove}</td>
 		<td class="rightc">{orders:cost}</td>
 	</tr>
 	{stop:orders}

@@ -24,6 +24,7 @@ $cs_lang['money_all'] = 'Total amount: %s Euro';
 $cs_lang['items_found'] = 'Items found: %s';
 $cs_lang['orders'] = 'Orders';
 $cs_lang['order_done'] = 'Item successfully ordered';
+$cs_lang['order_double'] = 'Item is already ordered without payment';
 $cs_lang['price'] = 'Price';
 $cs_lang['order'] = 'Order';
 

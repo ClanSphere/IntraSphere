@@ -19,14 +19,25 @@ settype($article,'integer');
 settype($value,'integer');
 
 if(!empty($article) AND !empty($value)) {
-  $order_cells = array('users_id', 'lanshop_articles_id', 'lanshop_orders_since', 'lanshop_orders_value', 'lanshop_orders_status');
-  $order_save = array($account['users_id'], $article, cs_time(), $value, 1);
-  cs_sql_insert(__FILE__,'lanshop_orders',$order_cells,$order_save);
 
-  $get_art = "lanshop_articles_id = '" . $article . "'";
+  $where = 'users_id = ' . (int) $account['users_id'] . ' AND lanshop_articles_id = ' . (int) $article . ' AND lanshop_orders_status = 1';
+  $check = cs_sql_count(__FILE__, 'lanshop_orders', $where);
+
+  $get_art = "lanshop_articles_id = " . (int) $article;
   $fetch = cs_sql_select(__FILE__,'lanshop_articles','categories_id',$get_art);
   $categories_id = $fetch['categories_id'];
-  cs_redirect($cs_lang['order_done'],'lanshop','center', 'where=' . $categories_id);
+
+  if(empty($check)) {
+    $order_cells = array('users_id', 'lanshop_articles_id', 'lanshop_orders_since', 'lanshop_orders_value', 'lanshop_orders_status');
+    $order_save = array($account['users_id'], $article, cs_time(), $value, 1);
+    cs_sql_insert(__FILE__,'lanshop_orders',$order_cells,$order_save);
+
+    cs_redirect(cs_icon('submit') . ' ' . $cs_lang['order_done'],'lanshop','center', 'where=' . $categories_id);
+  }
+  else
+  {
+    cs_redirect(cs_icon('cancel') . ' ' . $cs_lang['order_double'],'lanshop','center', 'where=' . $categories_id);
+  }
 }
 else {
 	$categories_id = empty($cs_get['where']) ? 0 : $cs_get['where'];

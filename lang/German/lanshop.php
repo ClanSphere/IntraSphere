@@ -24,6 +24,7 @@ $cs_lang['money_all'] = 'Gesamtbetrag der Anfragen: %s Euro';
 $cs_lang['items_found'] = 'Gefundene Artikel: %s';
 $cs_lang['orders'] = 'Bestellungen';
 $cs_lang['order_done'] = 'Artikel wurde erfolgreich bestellt';
+$cs_lang['order_double'] = 'Zu diesem Artikel besteht bereits eine unbezahlte Bestellung';
 $cs_lang['price'] = 'Preis';
 $cs_lang['order'] = 'Bestellen';
 

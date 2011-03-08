@@ -11,7 +11,7 @@ $categories_id = empty($cs_get['where']) ? 0 : $cs_get['where'];
 if (!empty($cs_post['where']))  $categories_id = $cs_post['where'];
 $start = empty($cs_get['start']) ? 0 : $cs_get['start'];
 if (!empty($cs_post['start']))  $start = $cs_post['start'];
-$sort = empty($cs_get['sort']) ? 3 : $cs_get['sort'];
+$sort = empty($cs_get['sort']) ? 5 : $cs_get['sort'];
 if (!empty($cs_post['sort']))  $sort = $cs_post['sort'];
 
 if(!empty($_GET['remove_id'])) {
@@ -32,6 +32,8 @@ $cs_sort[1] = 'lanshop_articles_name DESC';
 $cs_sort[2] = 'lanshop_articles_name ASC';
 $cs_sort[3] = 'lanshop_articles_price DESC';
 $cs_sort[4] = 'lanshop_articles_price ASC';
+$cs_sort[5] = 'lanshop_orders_status ASC, lanshop_articles_name ASC';
+$cs_sort[6] = 'lanshop_orders_status DESC, lanshop_articles_name DESC';
 $order = $cs_sort[$sort];
 $from = 'lanshop_orders lso INNER JOIN {pre}_lanshop_articles las ON lso.lanshop_articles_id = las.lanshop_articles_id';
 $ls_count = cs_sql_select(__FILE__,$from,'COUNT(lanshop_orders_id)',$where);
@@ -48,12 +50,12 @@ $data['head']['cat_dropdown'] = cs_dropdown('where','categories_name',$categorie
 
 $data['sort']['name'] = cs_sort('lanshop','orders',$start,$categories_id,1,$sort);
 $data['sort']['price'] = cs_sort('lanshop','orders',$start,$categories_id,3,$sort);
+$data['sort']['status'] = cs_sort('lanshop','orders',$start,$categories_id,5,$sort);
 
 $select = 'lso.lanshop_orders_id AS lanshop_orders_id, lso.lanshop_orders_status AS lanshop_orders_status, lso.lanshop_orders_value AS lanshop_orders_value, las.lanshop_articles_id AS lanshop_articles_id, las.lanshop_articles_name AS lanshop_articles_name, las.lanshop_articles_price AS lanshop_articles_price';
 $cs_lanshop = cs_sql_select(__FILE__,$from,$select,$where,$order,$start,$account['users_limit']);
 $lanshop_loop = count($cs_lanshop);
 
-$money = 0;
 $data['orders'] = array();
 
 for($run=0; $run<$lanshop_loop; $run++) {
@@ -66,12 +68,11 @@ for($run=0; $run<$lanshop_loop; $run++) {
 	$data['orders'][$run]['value'] = $cs_lanshop[$run]['lanshop_orders_value'];
   $cost = $cs_lanshop[$run]['lanshop_articles_price'] * $cs_lanshop[$run]['lanshop_orders_value'];
   $data['orders'][$run]['cost'] = $cost / 100 . ' ' . $cs_lang['cost'];
-  
-  if($status == 1) {
-    $money = $money + $cost;
-  }
+  $rem_link = 'start=' . $start . '&amp;sort=' . $sort . '&amp;remove_id=' . $cs_lanshop[$run]['lanshop_orders_id'];
+  $data['orders'][$run]['remove'] = ($status == 1) ? cs_link(cs_icon('editdelete'), 'lanshop', 'orders', $rem_link) : '&nbsp;';
 }
 
-$data['bottom']['body'] = sprintf($cs_lang['money_all'],$money / 100);
+$money = cs_sql_select(__FILE__, $from, 'SUM(lso.lanshop_orders_value * las.lanshop_articles_price) AS totalcost', 'lso.lanshop_orders_status = 1');
+$data['bottom']['body'] = sprintf($cs_lang['money_all'],$money['totalcost'] / 100);
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','orders');
