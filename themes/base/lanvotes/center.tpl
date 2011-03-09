@@ -7,8 +7,10 @@
   <td class="rightb">{lang:link}</td>
  </tr>
  <tr>
-  <td class="leftb" colspan="2">{lang:select_lan}
+  <td class="leftb" colspan="2">
     <form method="post" id="lanvotes_center" action="{url:form}">
+    <fieldset style="border: 0; padding: 0">
+      {lang:select_lan} 
       <select name="lanpartys_id" >
         <option value="0">----</option>
         {loop:lanpartys}
@@ -16,6 +18,7 @@
 		{stop:lanpartys}
       </select>
       <input type="submit" name="submit" value="{lang:show}" />
+    </fieldset>
     </form>
   </td>
  </tr>
