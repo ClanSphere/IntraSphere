@@ -12,7 +12,7 @@ $mod_info['team']      = 'ClanSphere';
 $mod_info['url']        = 'www.clansphere.net';
 $mod_info['text']      = $cs_lang['modtext'];
 $mod_info['icon']       = 'kjumpingcube';
-$mod_info['show']       = array('clansphere/admin' => 3,'lanpartys/view' => 1);
+$mod_info['show']       = array('clansphere/admin' => 3,'options/roots' => 5,'lanpartys/view' => 1);
 $mod_info['references'] = array('lanpartys' => 'lanrooms');
 $mod_info['categories'] = FALSE;
 $mod_info['comments']  = FALSE;

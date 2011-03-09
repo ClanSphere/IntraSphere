@@ -74,3 +74,14 @@ $cs_lang['used'] = 'Reserved by %s';
 // Edit
 $cs_lang['head_edit']  = 'Edit';
 $cs_lang['body_edit']  = 'Occured errors are displayed here.';
+
+// Options
+$cs_lang['head_options']   = 'Options';
+$cs_lang['body_options']    = 'Configuration of the module';
+
+$cs_lang['max_width']      = 'Maximum width';
+$cs_lang['max_height']      = 'Maximum height';
+$cs_lang['max_size']      = 'Maximum size';
+
+$cs_lang['pixel']        = 'Pixel';
+$cs_lang['bytes']        = 'Bytes';

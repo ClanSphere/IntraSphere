@@ -1,16 +1,15 @@
 ALTER TABLE {pre}_access ADD access_lanpartys int(2) NOT NULL default '0';
-
 ALTER TABLE {pre}_access ADD access_languests int(2) NOT NULL default '0';
-
 ALTER TABLE {pre}_access ADD access_lanrooms int(2) NOT NULL default '0';
-
 ALTER TABLE {pre}_access ADD access_lanshop int(2) NOT NULL default '0';
-
 ALTER TABLE {pre}_access ADD access_lanvotes int(2) NOT NULL default '0';
 
 INSERT INTO {pre}_options (options_mod, options_name, options_value) VALUES ('lanpartys', 'max_width', '800');
 INSERT INTO {pre}_options (options_mod, options_name, options_value) VALUES ('lanpartys', 'max_height', '600');
 INSERT INTO {pre}_options (options_mod, options_name, options_value) VALUES ('lanpartys', 'max_size', '204800');
+INSERT INTO {pre}_options (options_mod, options_name, options_value) VALUES ('lanrooms', 'max_width', '1200');
+INSERT INTO {pre}_options (options_mod, options_name, options_value) VALUES ('lanrooms', 'max_height', '2400');
+INSERT INTO {pre}_options (options_mod, options_name, options_value) VALUES ('lanrooms', 'max_size', '409600');
 
 CREATE TABLE {pre}_lanpartys (
   lanpartys_id {serial},
@@ -54,6 +53,7 @@ CREATE TABLE {pre}_lanrooms (
   lanrooms_id {serial},
   lanpartys_id int(8) NOT NULL default '0',
 	lanrooms_name varchar(40) NOT NULL default '',
+  lanrooms_background varchar(80) NOT NULL default '',
   PRIMARY KEY (lanrooms_id),
   UNIQUE (lanpartys_id, lanrooms_name)
 ){engine};

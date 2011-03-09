@@ -14,6 +14,9 @@ install steps:
 
 3. set access level of the new five mods for all access entries to 2 or for admins to 5
 
+update steps:
+
+1. run "intrasphere_update.sql" in database -> import and empty the cache if needed
 
 please report any bugs you encounter and wishes at http://www.clansphere.net
 

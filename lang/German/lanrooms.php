@@ -74,3 +74,14 @@ $cs_lang['used'] = 'Reserviert von %s';
 // Edit
 $cs_lang['head_edit']  = 'Bearbeiten';
 $cs_lang['body_edit']  = 'Hier erscheinen etwaige Fehler nach dem Absenden.';
+
+// Options
+$cs_lang['head_options']    = 'Optionen';
+$cs_lang['body_options']    = 'Verwaltung der Einstellungen im Modul.';
+
+$cs_lang['max_width']      = 'Maximale Bildbreite';
+$cs_lang['max_height']     = 'Maximale Bildh&ouml;he';
+$cs_lang['max_size']      = 'Maximale Bildgr&ouml;&szlig;e';
+
+$cs_lang['pixel']        = 'Pixel';
+$cs_lang['bytes']        = 'Bytes';
