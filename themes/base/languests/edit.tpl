@@ -21,12 +21,9 @@
     </tr>
     <tr>
       <td class="leftc">{icon:personal} {lang:user} *</td>
-      <td class="leftb" colspan="2"><select name="users_id" >
-          <option value="0">----</option>
-		  {loop:user}
-          <option value="{user:id}" {user:select}>{user:name}</option>
-		  {stop:user}
-        </select>
+      <td class="leftb" colspan="2">
+        <input type="text" name="users_nick" id="users_nick" value="{users:nick}" autocomplete="off" onkeyup="Clansphere.ajax.user_autocomplete('users_nick', 'search_users_result' ,'{page:path}')" maxlength="80" size="40" /><br />
+        <div id="search_users_result"></div>
       </td>
     </tr>
     <tr>
@@ -46,7 +43,7 @@
     </tr>
     <tr>
       <td class="leftc">{icon:money} {lang:money}</td>
-      <td class="leftb"><input type="text" name="languests_money" value="{languests:money}" maxlength="20" size="8"  />
+      <td class="leftb"><input type="text" name="languests_money" value="{languests:money}" maxlength="20" size="8"  /> {lang:cent}
       </td>
     </tr>
     <tr>

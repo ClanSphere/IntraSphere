@@ -15,6 +15,7 @@ $cs_lang['team']            = 'Team';
 $cs_lang['money']           = 'Money';
 $cs_lang['paytime']         = 'Paytime';
 $cs_lang['notice']          = 'Note';
+$cs_lang['cent']            = 'Cent';
 
 $cs_lang['status_1']        = 'Registered';
 $cs_lang['status_3']        = 'Waiting list';

@@ -19,6 +19,7 @@ $cs_lang['money'] = 'Amount';
 $cs_lang['cost'] = 'Euro';
 $cs_lang['pay'] = 'Payment';
 $cs_lang['money_all'] = 'Total amount: %s Euro';
+$cs_lang['no_user_info'] = 'Please select a user to view orders';
 
 // Center
 $cs_lang['items_found'] = 'Items found: %s';

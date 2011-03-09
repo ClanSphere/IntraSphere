@@ -3,11 +3,14 @@
 // $Id: create.php 1775 2009-02-17 20:59:11Z duRiel $
 
 $cs_lang = cs_translate('languests');
+
+$users_nick = '';
+$cs_languests['users_id'] = 0;
+
 $cs_languests['languests_since'] = cs_time();
 
 if(isset($_POST['submit'])) {
   $cs_languests['lanpartys_id'] = $_POST['lanpartys_id'];
-  $cs_languests['users_id'] = $_POST['users_id'];
   $cs_languests['languests_status'] = $_POST['languests_status'];
   $cs_languests['languests_money'] = $_POST['languests_money'];
   $cs_languests['languests_notice'] = $_POST['languests_notice'];
@@ -15,15 +18,20 @@ if(isset($_POST['submit'])) {
   $cs_languests['languests_paytime'] = cs_datepost('pay','unix');
 
   settype($cs_languests['lanpartys_id'],'integer');
-  settype($cs_languests['users_id'],'integer');
 
   $error = 0;
   $errormsg = '';
 
-  if(empty($cs_languests['users_id'])) {
+  $users_nick = empty($_REQUEST['users_nick']) ? '' : $_REQUEST['users_nick'];
+
+  $where = "users_nick = '" . cs_sql_escape($users_nick) . "'";
+  $users_data = cs_sql_select(__FILE__, 'users', 'users_id', $where);
+  if(empty($users_data['users_id'])) {
     $error++;
     $errormsg .= $cs_lang['no_user'] . cs_html_br(1);
   }
+  else
+      $cs_languests['users_id'] = $users_data['users_id'];
   
   if(empty($cs_languests['lanpartys_id'])) {
     $error++;
@@ -52,7 +60,6 @@ if(isset($_POST['submit'])) {
 }
 else {
   $cs_languests['lanpartys_id'] = 0;
-  $cs_languests['users_id'] = 0;
   $cs_languests['languests_status'] = 0;
   $cs_languests['languests_money'] = '';
   $cs_languests['languests_paytime'] = 0;
@@ -81,23 +88,12 @@ if(!empty($error) OR !isset($_POST['submit'])) {
 
   for($run=0; $run<$lanpartys_data_loop; $run++) {
     $data['lanpartys'][$run]['id'] = $lanpartys_data[$run]['lanpartys_id'];
-    $data['lanpartys'][$run]['name'] = $lanpartys_data[$run]['lanpartys_name'];  
-  }
-
-  $users_data = cs_sql_select(__FILE__,'users','users_nick,users_id',0,'users_nick',0,0);
-  $users_data_loop = count($users_data);
-
-  if(empty($users_data_loop)) {
-    $data['user'] = '';
-  }
-
-  for($run=0; $run<$users_data_loop; $run++) {
-    $data['user'][$run]['id'] = $users_data[$run]['users_id'];
-    $data['user'][$run]['name'] = $users_data[$run]['users_nick'];
+    $data['lanpartys'][$run]['name'] = $lanpartys_data[$run]['lanpartys_name'];
+    $data['lanpartys'][$run]['select'] = ($cs_languests['lanpartys_id'] == $lanpartys_data[$run]['lanpartys_id']) ? 'selected="selected"' : '';
   }
 
   $data['languests']['team'] = $cs_languests['languests_team'];
-  
+
   $sel = array(1 => 0,3 => 0,4 => 0,5 => 0);
   if(isset($_POST['submit'])) {
     $cs_languests['languests_status'] == 3 ? $sel[3] = 1 : $sel[3] = 0;
@@ -112,6 +108,8 @@ if(!empty($error) OR !isset($_POST['submit'])) {
   $data['languests']['money'] = $cs_languests['languests_money'];
   $data['languests']['paytime'] = cs_dateselect('pay','unix',$cs_languests['languests_paytime']);
   $data['languests']['notice'] = $cs_languests['languests_notice'];
+
+  $data['users']['nick'] = cs_secure($users_nick);
 
   echo cs_subtemplate(__FILE__,$data,'languests','create');
 }

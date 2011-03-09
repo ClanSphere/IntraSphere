@@ -3,21 +3,24 @@
     <td class="headb" colspan="3">{lang:mod_name} - {lang:manage}</td>
   </tr>
   <tr>
-    <td class="leftb">{icon:editpaste} {lang:new}</td>
     <td class="leftb">{icon:contents} {lang:total}: {count:all}</td>
-    <td class="rightb">{pages:list}</td>
+    <td class="rightb" style="width:25%">{pages:list}</td>
   </tr>
   <tr>
-    <td class="leftb" colspan="2"> {lang:select_lan}
+    <td class="leftb">
       <form method="post" id="languests_manage" action="{url:form}">
+      <fieldset style="border: 0; padding: 0">
+        {lang:select_lan} 
         <select name="where" >
           <option value="0">----</option>
           {loop:lanpartys}
-		  <option value="{lanpartys:id}">{lanpartys:name}</option>
+		      <option value="{lanpartys:id}">{lanpartys:name}</option>
           {stop:lanpartys}
         </select>
         <input type="submit" name="submit" value="{lang:show}" />
-      </form></td>
+      </fieldset>
+      </form>
+    </td>
     <td class="rightb">{lang:notices}</td>
   </tr>
 </table>

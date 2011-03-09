@@ -14,7 +14,7 @@
 	<tr>
 		<td class="headb">{lang:category}</td>
 		<td class="headb">{lang:status_2}</td>
-		<td class="headb">{lang:cost}</td>
+		<td class="headb">{lang:money}</td>
 		<td class="headb">{lang:print}</td>
 	</tr>
 	{loop:cat}
