@@ -13,9 +13,7 @@ $sort = empty($_REQUEST['sort']) ? 3 : $_REQUEST['sort'];
 $order = $cs_sort[$sort];
 $lanpartys_count = cs_sql_count(__FILE__,'lanpartys');
 
-
-$data['lang']['new'] = cs_link($cs_lang['new_lanparty'],'lanpartys','create');
-$data['lang']['count'] = $lanpartys_count;
+$data['head']['count'] = $lanpartys_count;
 $data['pages']['list'] = cs_pages('lanpartys','manage',$lanpartys_count,$start,0,$sort);
 
 $data['head']['message'] = cs_getmsg();

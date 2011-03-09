@@ -3,8 +3,7 @@
     <td class="headb" colspan="3">{lang:mod_name} - {lang:head_manage}</td>
   </tr>
   <tr>
-    <td class="leftb">{icon:editpaste} {lang:new}</td>
-    <td class="leftb">{icon:contents} {lang:all} {lang:count}</td>
+    <td class="leftb">{icon:contents} {lang:all} {head:count}</td>
     <td class="rightb">{pages:list}</td>
   </tr>
 </table>

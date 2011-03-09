@@ -6,7 +6,8 @@
     <td class="leftb">{lang:addons}</td>
   </tr>
   <tr>
-    <td class="centerc">{lang:status}: {lanpartys:status}
+    <td class="centerc">{lang:status}: {lanpartys:status}</td>
+  </tr>
 </table>
 <br />
 {lang:getmsg}

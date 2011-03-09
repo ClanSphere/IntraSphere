@@ -110,6 +110,7 @@ if(!empty($error) OR empty($_POST['submit'])) {
 
   $data['data']['id'] = $cs_lanpartys_id;
 
+  $data['lanpartys']['img'] = '';
   if(empty($lanpartys_string)) {
     $data['lanpartys']['img'] = $cs_lang['nopic'];
   }
@@ -117,10 +118,10 @@ if(!empty($error) OR empty($_POST['submit'])) {
     $run = 1;
     foreach($lanpartys_pics AS $pic) {
       $link = cs_html_img('uploads/lanpartys/thumb-' . $pic);
-      $data['lanpartys']['img'] = cs_html_link('uploads/lanpartys/picture-' . $pic,$link) . ' ';
+      $data['lanpartys']['img'] .= cs_html_link('uploads/lanpartys/picture-' . $pic,$link) . ' ';
       $set = 'id=' . $cs_lanpartys_id . '&amp;delete=' . $run++;
-      $data['lanpartys']['img'] .= cs_link($cs_lang['remove'],'lanpartys','picture',$set);
+      $data['lanpartys']['img'] .= cs_link($cs_lang['remove'],'lanpartys','picture',$set) . cs_html_br(1);
     }
   }
- echo cs_subtemplate(__FILE__,$data,'lanpartys','picture');
+  echo cs_subtemplate(__FILE__,$data,'lanpartys','picture');
 }

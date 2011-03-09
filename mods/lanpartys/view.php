@@ -4,7 +4,7 @@
 
 $cs_lang = cs_translate('lanpartys');
 
-$lanpartys_id = $_REQUEST['id'];
+$lanpartys_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanpartys_id,'integer');
 $cs_lanpartys = cs_sql_select(__FILE__,'lanpartys','*','lanpartys_id = ' . $lanpartys_id);
 
@@ -29,6 +29,7 @@ $data['lanpartys']['money'] = cs_secure($cs_lanpartys['lanpartys_money']);
 $data['lanpartys']['needage'] = cs_secure($cs_lanpartys['lanpartys_needage']);
 $data['lanpartys']['location'] = cs_secure($cs_lanpartys['lanpartys_location']);
 
+$data['lanpartys']['pictures'] = '';
 if(empty($cs_lanpartys['lanpartys_pictures'])) {
   $data['lanpartys']['pictures'] = $cs_lang['nopic'];
 }
@@ -36,7 +37,7 @@ else {
   $lanpartys_pics = explode("\n",$cs_lanpartys['lanpartys_pictures']);
   foreach($lanpartys_pics AS $pic) {
     $link = cs_html_img('uploads/lanpartys/thumb-' . $pic);
-    $data['lanpartys']['pictures'] = cs_html_link('uploads/lanpartys/picture-' . $pic,$link) . ' ';
+    $data['lanpartys']['pictures'] .= cs_html_link('uploads/lanpartys/picture-' . $pic,$link) . ' ';
   }
 }
 

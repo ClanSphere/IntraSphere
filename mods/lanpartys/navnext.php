@@ -4,8 +4,11 @@
 
 $cs_lang = cs_translate('lanpartys');
 
+$lan_id = empty($_GET['lanid']) ? 0 : $_GET['lanid'];
+settype($lan_id, 'integer');
+
 $select = 'lanpartys_name, lanpartys_start, lanpartys_location, lanpartys_maxguests, lanpartys_id';
-$where = 'lanpartys_end > ' . cs_time();
+$where = empty($lan_id) ? 'lanpartys_end > ' . cs_time() : 'lanpartys_id = ' . (int) $lan_id;
 $nav_lanparty = cs_sql_select(__FILE__,'lanpartys','*',$where,'lanpartys_start ASC');
 
 if(empty($nav_lanparty)) {
