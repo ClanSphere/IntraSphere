@@ -3,13 +3,14 @@
   <td class="headb" colspan="3">{lang:mod_name} - {lang:head_manage}</td>
  </tr>
  <tr>
-  <td class="leftb">{icon:editpaste} {lang:new}</td>
-  <td class="rightb">{icon:contents} {lang:all} {lang:count}</td>
+  <td class="leftb">{icon:contents} {lang:all} {head:count}</td>
   <td class="rightb">{pages:list}</td>
  </tr>
  <tr>
-  <td class="leftb" colspan="3">{lang:select_lan}
+  <td class="leftb" colspan="3">
     <form method="post" id="lanrooms_manage" action="{url:form}">
+    <fieldset style="border: 0; padding: 0">
+      {lang:select_lan} 
       <select name="lanpartys_id" >
         <option value="0">----</option>
         {loop:lan}
@@ -17,6 +18,7 @@
 		{stop:lan}
       </select>
       <input type="submit" name="submit" value="{lang:show}" />
+    </fieldset>
     </form>
   </td>
  </tr>

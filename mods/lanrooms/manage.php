@@ -20,9 +20,7 @@ $sort = empty($_REQUEST['sort']) ? 1 : $_REQUEST['sort'];
 $order = $cs_sort[$sort];
 $lanrooms_count = cs_sql_count(__FILE__,'lanrooms');
 
-$data['lang']['new'] = cs_link($cs_lang['new_lanroom'],'lanrooms','create');
-$data['lang']['all'] = $cs_lang['all'];
-$data['lang']['count'] = $lanrooms_count;
+$data['head']['count'] = $lanrooms_count;
 $data['pages']['list'] = cs_pages('lanrooms','manage',$lanrooms_count,$start,$lanpartys_id,$sort);
 
 $data['head']['message'] = cs_getmsg();

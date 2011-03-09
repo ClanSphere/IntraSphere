@@ -15,7 +15,7 @@ function cs_lanroom($mod,$action,$lanrooms_id,$lanroomd_id = 0,$free = 0) {
   $lanroomd_loop = count($lanroomd);
 
   if(empty($lanroomd_loop)) {
-    return $cs_lang['room_empty'];
+    return $cs_lang['room_empty'] . cs_html_br(1);
   }
   else {
     $where = "lanrooms_id = '" . $lanrooms_id . "'";
@@ -49,7 +49,7 @@ function cs_lanroom($mod,$action,$lanrooms_id,$lanroomd_id = 0,$free = 0) {
       $col++;
       
       $data['numbers'][$run]['output'] = '';
-      if(($lanroomd[$i]['lanroomd_row'] == $row) AND $lanroomd[$i]['lanroomd_col'] == $col) {
+      if(isset($lanroomd[$i]) AND $lanroomd[$i]['lanroomd_row'] == $row AND $lanroomd[$i]['lanroomd_col'] == $col) {
          $content = $lanroomd[$i]['lanroomd_number'] . ' - ';
          if($lanroomd[$i]['lanroomd_id'] == $lanroomd_id) {
            $content .= empty($free) ? $cs_lang['search'] : $cs_lang['self'];
