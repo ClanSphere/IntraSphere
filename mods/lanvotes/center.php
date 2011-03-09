@@ -33,6 +33,8 @@ if(empty($lanpartys_data_loop)) {
   $data['lanvotes'] = '';
 }
 
+$data['lanpartys'] = array();
+
 for($run=0; $run<$lanpartys_data_loop; $run++) {
   $data['lanpartys'][$run]['id'] = $lanpartys_data[$run]['lanpartys_id'];
   $data['lanpartys'][$run]['name'] = $lanpartys_data[$run]['lanpartys_name'];

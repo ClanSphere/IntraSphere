@@ -51,7 +51,7 @@
 	    <br />
         <br />
         {lang:seperate_by_enter}</td>
-      <td class="leftc"><textarea class="rte_abcode" name="lanvotes_election" cols="50" rows="8" id="{lanvotes:election}" ></textarea>
+      <td class="leftc"><textarea class="rte_abcode" name="lanvotes_election" cols="50" rows="8" id="lanvotes_election">{lanvotes:election}</textarea>
       </td>
     </tr>
     <tr>

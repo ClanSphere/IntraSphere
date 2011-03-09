@@ -6,12 +6,13 @@ $cs_lang = cs_translate('lanvotes');
 
 $lanpartys_id = empty($_REQUEST['where']) ? 0 : $_REQUEST['where'];
 
-if(!empty($_POST['lanpartys_id'])) {
+if(!empty($_POST['lanpartys_id']))
   $lanpartys_id = $_POST['lanpartys_id'];
-}
 
 settype($lanpartys_id,'integer');
 $where = empty($lanpartys_id) ? 0 : "lanpartys_id = '" . $lanpartys_id . "'";
+
+$data = array();
 
 $start = empty($_REQUEST['start']) ? 0 : $_REQUEST['start'];
 $cs_sort[1] = 'lanvotes_question DESC';
@@ -25,8 +26,7 @@ $order = $cs_sort[$sort];
 $lanvotes_count = cs_sql_count(__FILE__,'lanvotes');
 
 
-$data['lang']['new'] = cs_link($cs_lang['new_lanvote'],'lanvotes','create');
-$data['lang']['count'] = $lanvotes_count;
+$data['head']['count'] = $lanvotes_count;
 $data['pages']['list'] = cs_pages('lanvotes','manage',$lanvotes_count,$start,$lanpartys_id,$sort);
 $data['url']['form'] = cs_url('lanvotes','manage');
 
@@ -38,6 +38,8 @@ $lanpartys_data_loop = count($lanpartys_data);
 if(empty($lanpartys_data_loop)) {
   $data['lanvotes'] = '';
 }
+
+$data['lanpartys'] = array();
 
 for($run=0; $run<$lanpartys_data_loop; $run++) {
   $data['lanpartys'][$run]['id'] = $lanpartys_data[$run]['lanpartys_id'];

@@ -82,6 +82,8 @@ if(!empty($error) OR !isset($_POST['submit'])) {
     $data['lanvotes'] = '';
   }
 
+  $data['lanpartys'] = array();
+
   for($run=0; $run<$lanpartys_data_loop; $run++) {
     $data['lanpartys'][$run]['id'] = $lan_data[$run]['lanpartys_id'];
     $data['lanpartys'][$run]['name'] = $lan_data[$run]['lanpartys_name'];
@@ -100,8 +102,8 @@ if(!empty($error) OR !isset($_POST['submit'])) {
 
   $data['lanvotes']['start'] = cs_dateselect('start','unix',$cs_lanvotes['lanvotes_start']);
   $data['lanvotes']['end'] = cs_dateselect('end','unix',$cs_lanvotes['lanvotes_end']);
-  $data['lanvotes']['question'] = $cs_lanvotes['lanvotes_question'];
-  $data['lanvotes']['election'] = $cs_lanvotes['lanvotes_election'];
+  $data['lanvotes']['question'] = cs_secure($cs_lanvotes['lanvotes_question']);
+  $data['lanvotes']['election'] = cs_secure($cs_lanvotes['lanvotes_election']);
   
   echo cs_subtemplate(__FILE__,$data,'lanvotes','create');
 }
