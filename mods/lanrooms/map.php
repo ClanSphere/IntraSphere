@@ -21,9 +21,9 @@ if(!empty($_POST['submit'])) {
 
   if(empty($cs_lanroomd['lanroomd_number']))
     $error .= $cs_lang['no_number'] . cs_html_br(1);
-  if(empty($cs_lanroomd['lanroomd_row']))
+  if(empty($cs_lanroomd['lanroomd_row']) OR $cs_lanroomd['lanroomd_row'] > 999)
     $error .= $cs_lang['no_row'] . cs_html_br(1);  
-  if(empty($cs_lanroomd['lanroomd_col']))
+  if(empty($cs_lanroomd['lanroomd_col']) OR $cs_lanroomd['lanroomd_col'] > 99)
     $error .= $cs_lang['no_col'] . cs_html_br(1);
   
   if(empty($lanrooms_id)) {
