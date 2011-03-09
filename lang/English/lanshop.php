@@ -37,6 +37,7 @@ $cs_lang['no_price'] = '- Price must not be empty';
 $cs_lang['name_used'] = '- This name is already in use in this category';
 $cs_lang['cost_cent'] = 'Cent (%s Euro)';
 $cs_lang['info'] = 'Information';
+$cs_lang['editprice_info'] = 'Keep in mind that changes will affect all payments';
 
 // Delivery
 $cs_lang['head_delivery']  = 'Delivery';

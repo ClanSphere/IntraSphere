@@ -9,6 +9,7 @@ $axx_file['view']    = 2;
 $axx_file['cashdesk']  = 3;
 $axx_file['delivery']  = 3;
 $axx_file['export']    = 3;
+$axx_file['printcat']  = 3;
 $axx_file['manage']    = 3;
 $axx_file['create']    = 3;
 $axx_file['edit']      = 4;

@@ -22,7 +22,10 @@
 	</tr>
 	<tr>
 		<td class="leftb">{icon:money} {lang:price} *</td>
-		<td class="leftc"><input type="text" name="lanshop_articles_price" value="{data:lanshop_articles_price}" maxlength="8" size="8" /> {ls:price}</td>
+		<td class="leftc">
+      {lang:editprice_info}<br />
+      <input type="text" name="lanshop_articles_price" value="{data:lanshop_articles_price}" maxlength="8" size="8" /> {ls:price}
+    </td>
 	</tr>
 	<tr>
 		<td class="leftb">{icon:documentinfo} {lang:info}<br />
