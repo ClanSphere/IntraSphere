@@ -4,8 +4,10 @@
 
 $cs_lang = cs_translate('lanpartys');
 
-$where = empty($_REQUEST['where']) ? $_GET['id'] : $_REQUEST['where'];
+$where = empty($_REQUEST['where']) ? 0: $_REQUEST['where'];
+$where = empty($_GET['id']) ? $where : $_GET['id'];
 settype($where,'integer');
+
 $start = empty($_REQUEST['start']) ? 0 : $_REQUEST['start'];
 $cs_sort[1] = 'lanpartys_name DESC';
 $cs_sort[2] = 'lanpartys_name ASC';

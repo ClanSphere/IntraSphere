@@ -9,8 +9,9 @@ $data['head']['getmsg'] = cs_getmsg();
 
 if(isset($_POST['submit'])) {
 
-  $categories_id = $_POST['categories_id'];
+  $categories_id = empty($_POST['categories_id']) ? 0 : $_POST['categories_id'];
   settype($categories_id,'integer');
+
   $since = cs_datepost('since','unix');
   $lanshop_cells = array('lanshop_orders_status');
   $lanshop_save = array(3);
@@ -26,7 +27,7 @@ if(isset($_POST['submit'])) {
      cs_sql_update(__FILE__,'lanshop_orders',$lanshop_cells,$lanshop_save,0,$targets . $art);
     }
   }
- cs_redirect($cs_lang['delivery_done'],'lanshop','delivery');
+  cs_redirect($cs_lang['delivery_done'],'lanshop','delivery');
 }
 else {
 
@@ -39,5 +40,5 @@ else {
 
   $data['ls']['date_sel'] = cs_dateselect('since','unix',$since);
   
- echo cs_subtemplate(__FILE__,$data,'lanshop','delivery');
+  echo cs_subtemplate(__FILE__,$data,'lanshop','delivery');
 }

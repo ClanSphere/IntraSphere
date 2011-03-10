@@ -5,7 +5,7 @@
 $cs_lang = cs_translate('lanpartys');
 
 $lanpartys_form = 1;
-$lanpartys_id = $_REQUEST['id'];
+$lanpartys_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanpartys_id,'integer');
 
 if(isset($_GET['agree'])) {

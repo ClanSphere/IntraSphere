@@ -5,7 +5,7 @@
 $cs_lang = cs_translate('lanrooms');
 
 $lanrooms_form = 1;
-$lanrooms_id = $_REQUEST['id'];
+$lanrooms_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanrooms_id,'integer');
 
 if(isset($_GET['agree'])) {

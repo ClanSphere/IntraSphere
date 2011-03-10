@@ -3,7 +3,7 @@
 // $Id: edit.php 1430 2008-12-10 13:08:44Z Fr33z3m4n $
 
 $cs_lang = cs_translate('lanpartys');
-$lanpartys_id = $_REQUEST['id'];
+$lanpartys_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanpartys_id,'integer');
 
 if(isset($_POST['submit'])) {

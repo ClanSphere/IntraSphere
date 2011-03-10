@@ -4,9 +4,8 @@
 
 $cs_lang = cs_translate('lanrooms');
 
-$lanrooms_id = $_REQUEST['id'];
+$lanrooms_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanrooms_id,'integer');
-
 
 if(!empty($_POST['submit'])) {
   $cs_lanroomd['lanroomd_number'] = $_POST['lanroomd_number'];

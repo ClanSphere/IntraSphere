@@ -4,7 +4,7 @@
 
 $cs_lang = cs_translate('lanpartys');
 
-$languests_id = $_REQUEST['id'];
+$languests_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($languests_id,'integer');
 
 $error = 0;

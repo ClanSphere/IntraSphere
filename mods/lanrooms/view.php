@@ -5,7 +5,7 @@
 $cs_lang = cs_translate('lanrooms');
 
 if(empty($_REQUEST['lanroomd_id'])) {
-  $lanrooms_id = $_REQUEST['id'];
+  $lanrooms_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
   settype($lanrooms_id,'integer');
   $lanroomd_id = 0;
 }

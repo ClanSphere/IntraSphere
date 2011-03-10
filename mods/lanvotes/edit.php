@@ -4,7 +4,7 @@
 
 $cs_lang = cs_translate('lanvotes');
 
-$lanvotes_id = $_REQUEST['id'];
+$lanvotes_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanvotes_id,'integer');
 
 if(isset($_POST['submit'])) {

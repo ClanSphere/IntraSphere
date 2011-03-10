@@ -4,7 +4,8 @@
 
 $cs_lang = cs_translate('lanpartys');
 
-$cs_lanpartys_id = empty($_REQUEST['where']) ? $_GET['id'] : $_REQUEST['where'];
+$cs_lanpartys_id = empty($_REQUEST['where']) ? 0 : $_REQUEST['where'];
+$cs_lanpartys_id = empty($_GET['id']) ? $cs_lanpartys_id : $_GET['id'];
 settype($cs_lanpartys_id,'integer');
 
 $op_lanpartys = cs_sql_option(__FILE__,'lanpartys');

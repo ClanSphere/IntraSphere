@@ -5,12 +5,10 @@
 $cs_lang = cs_translate('lanvotes');
 
 $lanpartys_id = empty($_REQUEST['where']) ? 0 : $_REQUEST['where'];
-
-if(!empty($_POST['lanpartys_id'])) {
+if(!empty($_POST['lanpartys_id']))
   $lanpartys_id = $_POST['lanpartys_id'];
-}
-
 settype($lanpartys_id,'integer');
+
 $where = empty($lanpartys_id) ? '' : "lvs.lanpartys_id = '" . $lanpartys_id . "' AND ";
 
 $cs_sort[1] = 'lvs.lanvotes_question DESC';

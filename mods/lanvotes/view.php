@@ -4,7 +4,7 @@
 
 $cs_lang = cs_translate('lanvotes');
 
-$lanvotes_id = $_REQUEST['id'];
+$lanvotes_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanvotes_id,'integer');
 
 $cs_lanvotes = cs_sql_select(__FILE__,'lanvotes','*',"lanvotes_id = '" . $lanvotes_id . "'");

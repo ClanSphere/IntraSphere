@@ -8,14 +8,16 @@ if(empty($_GET['save_id'])) {
   $lanpartys_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
   $lanpartys_id = empty($_REQUEST['where']) ? $lanpartys_id : $_REQUEST['where'];
   settype($lanpartys_id,'integer');
+
   $where = "lanpartys_id = '" . $lanpartys_id . "'";
   $first_room = cs_sql_select(__FILE__,'lanrooms','lanrooms_id',$where,'lanrooms_name');
   $lanrooms_id = empty($_REQUEST['lanrooms_id']) ? $first_room['lanrooms_id'] : $_REQUEST['lanrooms_id'];
 }
 else {
-  settype($_GET['save_id'],'integer');
+  $save_id = $_GET['save_id'];
+  settype($save_id,'integer');
 
-  $where = "lanroomd_id = '" . $_GET['save_id'] . "'";
+  $where = "lanroomd_id = '" . $save_id . "'";
   $save_room = cs_sql_select(__FILE__,'lanroomd','lanrooms_id',$where);
   $lanrooms_id = $save_room['lanrooms_id'];
   $where = "lanrooms_id = '" . $lanrooms_id . "'";
@@ -35,7 +37,7 @@ else {
     $errormsg .= $cs_lang['no_party'] . cs_html_br(1);
   }
 
-  $where = "lanroomd_id = '" . $_GET['save_id'] . "' AND users_id != '" . $account['users_id'] . "'";
+  $where = "lanroomd_id = '" . $save_id . "' AND users_id != '" . $account['users_id'] . "'";
   $search = cs_sql_count(__FILE__,'languests',$where);
   
   if(!empty($search)) {
@@ -61,7 +63,7 @@ else {
 
   if(empty($error)) {
     $languests_cells = array('lanroomd_id');
-    $languests_save = array($_GET['save_id']);
+    $languests_save = array($save_id);
     cs_sql_update(__FILE__,'languests',$languests_cells,$languests_save,$target['languests_id']);
   }
 }
@@ -83,7 +85,7 @@ for($run=0; $run<$lan_data_loop; $run++) {
   $data['lan'][$run]['name'] = $room_data[$run]['lanrooms_name'];
 }
 
-if(empty($_GET['save_id'])) {
+if(empty($save_id)) {
   $data['lang']['body'] = $cs_lang['body_lanpartys'];
 }
 elseif(!empty($error)) {

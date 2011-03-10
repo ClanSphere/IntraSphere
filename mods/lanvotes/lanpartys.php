@@ -6,8 +6,8 @@ $cs_lang = cs_translate('lanvotes');
 
 $lanpartys_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 $lanpartys_id = empty($_REQUEST['where']) ? $lanpartys_id : $_REQUEST['where'];
-
 settype($lanpartys_id,'integer');
+
 $start = empty($_REQUEST['start']) ? 0 : $_REQUEST['start'];
 $where = empty($lanpartys_id) ? 0 : "lanpartys_id = '" . $lanpartys_id . "'";
 $cs_sort[1] = 'lanvotes_question DESC';

@@ -6,6 +6,7 @@ $cs_lang = cs_translate('lanpartys');
 
 $lanpartys_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($lanpartys_id,'integer');
+
 $cs_lanpartys = cs_sql_select(__FILE__,'lanpartys','*','lanpartys_id = ' . $lanpartys_id);
 
 $data['lang']['addons'] = cs_addons('lanpartys','view',$lanpartys_id,'lanpartys');

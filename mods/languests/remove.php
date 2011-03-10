@@ -5,7 +5,7 @@
 $cs_lang = cs_translate('languests');
 
 $languests_form = 1;
-$languests_id = $_REQUEST['id'];
+$languests_id = empty($_REQUEST['id']) ? 0 : $_REQUEST['id'];
 settype($languests_id,'integer');
 
 if(isset($_GET['agree'])) {
