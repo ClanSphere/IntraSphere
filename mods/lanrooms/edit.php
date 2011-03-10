@@ -115,6 +115,9 @@ if(!empty($error) OR !isset($_POST['submit'])) {
 
   $data['data']['id'] = $lanrooms_id;
 
+  include_once 'mods/lanrooms/functions.php';
+  $data['data']['map'] = cs_lanroom('lanrooms','edit',$lanrooms_id);
+
   $data['data']['current_pic'] = $cs_lang['nopic'];
   if(!empty($cs_lanrooms['lanrooms_background'])) {
     $data['if']['more'] = TRUE;
@@ -142,4 +145,4 @@ else {
   cs_sql_update(__FILE__,'lanrooms',$lanrooms_cells,$lanrooms_save,$lanrooms_id);
   
   cs_redirect($cs_lang['changes_done'], 'lanrooms') ;
-} 
+}

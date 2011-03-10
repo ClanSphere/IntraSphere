@@ -28,9 +28,6 @@
       </td>
     </tr>
   <tr>
-    <td class="centerc" colspan="2">{data:current_pic}</td>
-  </tr>
-  <tr>
     <td class="leftb">{icon:download} {lang:background_img}</td>
     <td class="leftc">
       <input type="file" name="background" value="" /><br />
@@ -54,3 +51,6 @@
     </tr>
   </table>
 </form>
+<br />
+
+{data:map}
