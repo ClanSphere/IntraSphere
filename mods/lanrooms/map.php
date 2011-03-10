@@ -33,14 +33,12 @@ if(!empty($_POST['submit'])) {
     $where .= $lanrooms_id . "'";
     $search_number = cs_sql_count(__FILE__,'lanroomd',$where);
     if(!empty($search_number)) {
-      $error++;
       $error .= $cs_lang['number_used'] . cs_html_br(1);
     }
     $where = "lanroomd_row = '" . $cs_lanroomd['lanroomd_row'] . "' AND lanroomd_col = '";
     $where .= $cs_lanroomd['lanroomd_col'] . "' AND lanrooms_id = '" . $lanrooms_id . "'";
     $search_target = cs_sql_count(__FILE__,'lanroomd',$where);
     if(!empty($search_target)) {
-      $error++;
       $error .= $cs_lang['target_used'] . cs_html_br(1);
     }
  }
