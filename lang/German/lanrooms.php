@@ -56,6 +56,17 @@ $cs_lang['body_create']  = 'Einen neuen Bereich eintragen.';
 $cs_lang['no_lanparty'] = '- Es muss eine LAN-Party ausgew&auml;hlt werden';
 $cs_lang['no_name'] = '- Es muss ein Name eingegeben werden';
 $cs_lang['name_lan_exists'] = '- Der Bereich existiert bereits zur gew&auml;hlten LAN-Party';
+$cs_lang['background_img'] = 'Hintergrundbild';
+$cs_lang['nopic']       = 'Kein Bild vorhanden';
+$cs_lang['pic_infos']   = 'Infobox';
+$cs_lang['filetypes']   = 'Dateiformate: ';
+$cs_lang['more']      = 'Erweitert';
+$cs_lang['pic_remove']      = ' Bild entfernen';
+$cs_lang['too_big']    = '- Die Datei ist zu gro&szlig;';
+$cs_lang['too_wide']  = '- Das Bild ist zu breit';
+$cs_lang['too_high']  = '- Das Bild ist zu hoch';
+$cs_lang['ext_error']  = '- Es wurde ein unerlaubter Dateityp benutzt';
+$cs_lang['up_error']   = '- Unbekannter Fehler, bitte den Webmaster kontaktieren';
 
 // Remove
 $cs_lang['head_remove']  = 'Entfernen';

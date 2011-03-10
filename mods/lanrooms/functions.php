@@ -8,6 +8,12 @@ function cs_lanroom($mod,$action,$lanrooms_id,$lanroomd_id = 0,$free = 0) {
   $cs_lang = cs_translate('lanrooms');
   settype($lanrooms_id,'integer');
 
+  global $cs_main;
+  $data['data']['background'] = '';
+  $room = cs_sql_select(__FILE__,'lanrooms','lanrooms_background',"lanrooms_id = " . (int) $lanrooms_id);
+  if(!empty($room['lanrooms_background']))
+    $data['data']['background'] = 'background: url(' . $cs_main['php_self']['dirname'] . 'uploads/lanrooms/' . $room['lanrooms_background'] . ') no-repeat';
+
   $from = "lanroomd lrd LEFT JOIN {pre}_languests lgs ON lrd.lanroomd_id = lgs.lanroomd_id LEFT JOIN {pre}_users usr ON lgs.users_id = usr.users_id";
   $select = "lrd.lanroomd_col AS lanroomd_col, lrd.lanroomd_row AS lanroomd_row, lrd.lanroomd_number AS lanroomd_number, usr.users_nick AS users_nick, usr.users_id AS users_id, lrd.lanroomd_id AS lanroomd_id";
   $order = 'lrd.lanroomd_row ASC, lrd.lanroomd_col ASC';

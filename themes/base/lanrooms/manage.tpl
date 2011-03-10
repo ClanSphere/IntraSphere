@@ -33,9 +33,9 @@
  {loop:lanrooms}
  <tr>
   <td class="leftc">{lanrooms:name}</td>
-  <td class="leftc">{lanrooms:map}</td>
-  <td class="leftc">{lanrooms:edit}</td>
-  <td class="leftc">{lanrooms:del}</td>
+  <td class="centerc">{lanrooms:map}</td>
+  <td class="centerc">{lanrooms:edit}</td>
+  <td class="centerc">{lanrooms:del}</td>
  </tr>
  {stop:lanrooms}
 </table>

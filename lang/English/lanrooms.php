@@ -53,9 +53,20 @@ $cs_lang['head_view']  = 'Details';
 $cs_lang['head_create']  = 'Create';
 $cs_lang['body_create']  = 'Enter a new room';
 
-$cs_lang['no_lanparty'] = '- Your have to specify a LAN-Party';
+$cs_lang['no_lanparty'] = '- You have to specify a LAN-Party';
 $cs_lang['no_name'] = '- You have to specify a name';
 $cs_lang['name_lan_exists'] = '- The LAN-Party already contains a so named room';
+$cs_lang['background_img'] = 'Background Image';
+$cs_lang['nopic']       = 'No picture available';
+$cs_lang['pic_infos']   = 'Infobox';
+$cs_lang['filetypes']   = 'Filetype: ';
+$cs_lang['more']      = 'More';
+$cs_lang['pic_remove']      = 'Remove picture';
+$cs_lang['too_big']    = '- The file is too big;';
+$cs_lang['too_wide']  = '- The file is too wide';
+$cs_lang['too_high']  = '- The file is too high';
+$cs_lang['ext_error']  = '- Unknown filetype';
+$cs_lang['up_error']   = '- Unexpected error, please contact Webmaster';
 
 // Remove
 $cs_lang['head_remove']  = 'Remove';

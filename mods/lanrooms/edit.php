@@ -7,16 +7,66 @@ $cs_lang = cs_translate('lanrooms');
 $lanrooms_id = $_REQUEST['id'];
 settype($lanrooms_id,'integer');
 
+$op_lanrooms = cs_sql_option(__FILE__,'lanrooms');
+$img_filetypes = array('gif','jpg','png');
+$files = cs_files();
+
+$data['if']['more'] = FALSE;
+
 if(isset($_POST['submit'])) {
   $cs_lanrooms['lanpartys_id'] = $_POST['lanpartys_id'];
   $cs_lanrooms['lanrooms_name'] = $_POST['lanrooms_name'];
+  $cs_lanrooms['lanrooms_background'] = $_POST['lanrooms_background'];
 
-  $error = 0;
-  $errormsg = '';
+  $error = '';
+
+  if(isset($_POST['delete']) AND $_POST['delete'] == TRUE AND !empty($cs_lanrooms['lanrooms_background'])) {
+    cs_unlink('lanrooms', $cs_lanrooms['lanrooms_background']);
+    $cs_lanrooms['lanrooms_background'] = '';
+  }
+
+  $img_size = false;
+  if(!empty($files['background']['tmp_name']))
+    $img_size = getimagesize($files['background']['tmp_name']);
+
+  if(!empty($files['background']['tmp_name']) AND empty($img_size) OR $img_size[2] > 3) {
+    $error .= $cs_lang['ext_error'] . cs_html_br(1);
+  }
+  elseif(!empty($files['background']['tmp_name'])) {
+
+    switch($img_size[2]) {
+    case 1:
+      $ext = 'gif'; break;
+    case 2:
+      $ext = 'jpg'; break;
+    case 3:
+      $ext = 'png'; break;
+    }
+    $filename = 'background-' . $lanrooms_id . '.' . $ext;
+    
+    if($img_size[0]>$op_lanrooms['max_width']) {
+      $error .= $cs_lang['too_wide'] . cs_html_br(1);
+    }
+    if($img_size[1]>$op_lanrooms['max_height']) { 
+      $error .= $cs_lang['too_high'] . cs_html_br(1);
+    }
+    if($files['background']['size']>$op_lanrooms['max_size']) { 
+      $error .= $cs_lang['too_big'] . cs_html_br(1);
+    }
+    if(empty($error) AND cs_upload('lanrooms', $filename, $files['background']['tmp_name']) OR !empty($error) AND extension_loaded('gd') AND cs_resample($files['background']['tmp_name'], 'uploads/lanrooms/' . $filename, $op_lanrooms['max_width'], $op_lanrooms['max_height'])) {
+      $error = '';
+      if($cs_lanrooms['lanrooms_background'] != $filename AND !empty($cs_lanrooms['lanrooms_background'])) {
+        cs_unlink('lanrooms', $cs_lanrooms['lanrooms_background']);
+      }
+      $cs_lanrooms['lanrooms_background'] = $filename;
+    }
+    else {
+      $error .= $cs_lang['up_error'];
+    }
+  }
 
   if(empty($cs_lanrooms['lanpartys_id'])) {
-    $error++;
-    $errormsg .= $cs_lang['no_lanparty'] . cs_html_br(1);
+    $error .= $cs_lang['no_lanparty'] . cs_html_br(1);
   }
   else {
     $where = "lanpartys_id = '" . cs_sql_escape($cs_lanrooms['lanpartys_id']) . "' AND ";
@@ -24,25 +74,22 @@ if(isset($_POST['submit'])) {
     $where .= " AND lanrooms_id != '" . $lanrooms_id . "'";
     $search_collision = cs_sql_count(__FILE__,'lanrooms',$where);
     if(!empty($search_collision)) {
-      $error++;
-      $errormsg .= $cs_lang['name_lan_exists'] . cs_html_br(1);
+      $error .= $cs_lang['name_lan_exists'] . cs_html_br(1);
     }
   }
 
   if(empty($cs_lanrooms['lanrooms_name'])) {
-    $error++;
-    $errormsg .= $cs_lang['no_name'] . cs_html_br(1);
+    $error .= $cs_lang['no_name'] . cs_html_br(1);
   }
 }
 else {
-  $cells = 'lanpartys_id, lanrooms_name';
+  $cells = 'lanpartys_id, lanrooms_name, lanrooms_background';
   $cs_lanrooms = cs_sql_select(__FILE__,'lanrooms',$cells,"lanrooms_id = '" . $lanrooms_id . "'");
 }
 
-if(!isset($_POST['submit'])) {
-  $data['lang']['body'] = $cs_lang['body_edit'];
-}
-
+$data['lang']['body'] = $cs_lang['body_edit'];
+if(!empty($error))
+  $data['lang']['body'] = $error;
 
 if(!empty($error) OR !isset($_POST['submit'])) {
   $data['url']['form'] = cs_url('lanrooms','edit');
@@ -65,9 +112,28 @@ if(!empty($error) OR !isset($_POST['submit'])) {
   }
 
   $data['lanroom']['name'] = $cs_lanrooms['lanrooms_name'];
-  
+
   $data['data']['id'] = $lanrooms_id;
-  
+
+  $data['data']['current_pic'] = $cs_lang['nopic'];
+  if(!empty($cs_lanrooms['lanrooms_background'])) {
+    $data['if']['more'] = TRUE;
+    $place = 'uploads/lanrooms/' . $cs_lanrooms['lanrooms_background'];
+    $size = getimagesize($cs_main['def_path'] . '/' . $place);
+    $data['data']['current_pic'] = cs_html_img($place,$size[1],$size[0]);
+  }
+
+  $matches[1] = $cs_lang['pic_infos'];
+  $return_types = '';
+  foreach($img_filetypes AS $add) {
+    $return_types .= empty($return_types) ? $add : ', ' . $add;
+  }
+  $matches[2] = $cs_lang['max_width'] . ': ' . $op_lanrooms['max_width'] . ' px' . cs_html_br(1);
+  $matches[2] .= $cs_lang['max_height'] . ': ' . $op_lanrooms['max_height'] . ' px' . cs_html_br(1);
+  $matches[2] .= $cs_lang['max_size'] . ': ' . cs_filesize($op_lanrooms['max_size']) . cs_html_br(1);
+  $matches[2] .= $cs_lang['filetypes'] . $return_types;
+  $data['data']['picup_clip'] = cs_abcode_clip($matches);
+
   echo cs_subtemplate(__FILE__,$data,'lanrooms','edit');
 }
 else {
