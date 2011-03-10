@@ -52,7 +52,7 @@ CREATE TABLE {pre}_languests (
 CREATE TABLE {pre}_lanrooms (
   lanrooms_id {serial},
   lanpartys_id int(8) NOT NULL default '0',
-	lanrooms_name varchar(40) NOT NULL default '',
+  lanrooms_name varchar(40) NOT NULL default '',
   lanrooms_background varchar(80) NOT NULL default '',
   PRIMARY KEY (lanrooms_id),
   UNIQUE (lanpartys_id, lanrooms_name)
@@ -61,9 +61,9 @@ CREATE TABLE {pre}_lanrooms (
 CREATE TABLE {pre}_lanroomd (
   lanroomd_id {serial},
   lanrooms_id int(8) NOT NULL default '0',
-	lanroomd_number int(4) NOT NULL default '0',
-	lanroomd_row int(4) NOT NULL default '0',
-	lanroomd_col int(4) NOT NULL default '0',
+  lanroomd_number int(4) NOT NULL default '0',
+  lanroomd_row int(4) NOT NULL default '0',
+  lanroomd_col int(4) NOT NULL default '0',
   PRIMARY KEY (lanroomd_id),
   UNIQUE (lanrooms_id, lanroomd_row, lanroomd_col),
   UNIQUE (lanrooms_id, lanroomd_number)
@@ -85,7 +85,7 @@ CREATE TABLE {pre}_lanvotes (
 CREATE TABLE {pre}_lanvoted (
   lanvoted_id {serial},
   lanvotes_id int(8) NOT NULL default '0',
-	users_id int(8) NOT NULL default '0',
+  users_id int(8) NOT NULL default '0',
   lanvoted_since varchar(14) NOT NULL default '',
   lanvoted_answer int(8) NOT NULL default '0',
   PRIMARY KEY (lanvoted_id),

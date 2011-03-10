@@ -42,14 +42,14 @@ if(isset($_POST['submit'])) {
 }
 
 if(!isset($_POST['submit']))
-	$data['head']['body'] = $cs_lang['body_create'];
+  $data['head']['body'] = $cs_lang['body_create'];
 elseif(!empty($error))
-	$data['head']['body'] = $error;
+  $data['head']['body'] = $error;
 
 
 if(!empty($error) OR !isset($_POST['submit'])) {
 
-	$data['data'] = $cs_lanshop;
+  $data['data'] = $cs_lanshop;
 
   $data['ls']['categories'] = cs_categories_dropdown('lanshop',$cs_lanshop['categories_id']);
   $data['ls']['price'] = sprintf($cs_lang['cost_cent'],$cs_lanshop['lanshop_articles_price'] / 100);

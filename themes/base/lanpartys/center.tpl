@@ -22,7 +22,7 @@
     <td class="leftc">{lanpartys:start}</td>
     <td class="leftc">{lanpartys:status}</td>
     <td class="leftc">{lanpartys:edit}</td>
-	<td class="leftc">{lanpartys:remove}</td>
+  <td class="leftc">{lanpartys:remove}</td>
   </tr>
   {stop:lanpartys}
 </table>

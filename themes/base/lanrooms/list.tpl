@@ -4,7 +4,7 @@
   </tr>
   <tr>
     <td class="leftb">{lang:all} {lang:count}</td>
-	<td class="rightb">{pages:list}</td>
+  <td class="rightb">{pages:list}</td>
   </tr>
   <tr>
     <td class="leftb" colspan="2">{lang:select_lan}
@@ -12,8 +12,8 @@
       <select name="lanpartys_id" >
         <option value="0">----</option>
         {loop:lan}
-		<option value="{lan:id}">{lan:name}</option>
-		{stop:lan}
+    <option value="{lan:id}">{lan:name}</option>
+    {stop:lan}
       </select>
       <input type="submit" name="submit" value="{lang:show}" />
     </form></td>

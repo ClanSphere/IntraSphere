@@ -33,9 +33,9 @@ $data['orders'] = array();
 
 for($run = 0; $run < $lanshop_loop; $run++) {
 
-	$data['orders'][$run]['if']['user'] = FALSE;
+  $data['orders'][$run]['if']['user'] = FALSE;
   if($users_id != $cs_lanshop[$run]['users_id']) {
-  	$data['orders'][$run]['if']['user'] = TRUE;
+    $data['orders'][$run]['if']['user'] = TRUE;
     $users_id = $cs_lanshop[$run]['users_id'];
     $data['orders'][$run]['user'] = cs_user($users_id, $cs_lanshop[$run]['users_nick'], $cs_lanshop[$run]['users_active'], $cs_lanshop[$run]['users_delete']);
   }

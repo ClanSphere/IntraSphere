@@ -15,10 +15,10 @@
       <td class="leftb">{icon:connect_to_network} {lang:lanparty} *</td>
       <td class="leftc"><select name="lanpartys_id" >
           <option value="{lan_old:id}">{lan_old:name}</option>
-		  <option value="0">----</option>
+      <option value="0">----</option>
           {loop:lan}
-		  <option value="{lan:id}">{lan:name}</option>
-		  {stop:lan}
+      <option value="{lan:id}">{lan:name}</option>
+      {stop:lan}
         </select>
       </td>
     </tr>
@@ -44,9 +44,9 @@
     <tr>
       <td class="leftb">{icon:ksysguard} {lang:options}</td>
       <td class="leftc">
-	  <input type="hidden" name="id" value="{data:id}" />
+    <input type="hidden" name="id" value="{data:id}" />
     <input type="hidden" name="lanrooms_background" value="{data:lanrooms_background}" />
-	  <input type="submit" name="submit" value="{lang:submit}" />
+    <input type="submit" name="submit" value="{lang:submit}" />
       </td>
     </tr>
   </table>

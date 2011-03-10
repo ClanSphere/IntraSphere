@@ -16,8 +16,8 @@
       <td class="leftc"><select name="lanpartys_id" >
           <option value="0">----</option>
           {loop:lanpartys}
-		  <option value="{lanpartys:id}">{lanpartys:name}</option>
-		  {stop:lanpartys}
+      <option value="{lanpartys:id}">{lanpartys:name}</option>
+      {stop:lanpartys}
         </select>
       </td>
     </tr>
@@ -25,9 +25,9 @@
       <td class="leftb">{icon:status_unknown} {lang:status} *</td>
       <td class="leftc"><select name="lanvotes_status" >
           {lang:status_1}
-		  {lang:status_3}
-		  {lang:status_4}
-		  {lang:status_5}
+      {lang:status_3}
+      {lang:status_4}
+      {lang:status_5}
         </select>
       </td>
     </tr>
@@ -48,7 +48,7 @@
     </tr>
     <tr>
       <td class="leftb">{icon:kate} {lang:answer} *
-	    <br />
+      <br />
         <br />
         {lang:seperate_by_enter}</td>
       <td class="leftc"><textarea class="rte_abcode" name="lanvotes_election" cols="50" rows="8" id="lanvotes_election">{lanvotes:election}</textarea>

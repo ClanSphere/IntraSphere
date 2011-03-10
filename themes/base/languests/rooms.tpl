@@ -7,9 +7,9 @@
         {lang:area}
         <select name="lanrooms_id" >
           <option value="0">----</option>
-		  {loop:room}
-		  <option value="{room:id}">{room:name}</option>
-		  {stop:room}
+      {loop:room}
+      <option value="{room:id}">{room:name}</option>
+      {stop:room}
         </select>
         <input type="hidden" name="id" value="{data:id}" />
         <input type="submit" name="submit" value="Anzeigen" />

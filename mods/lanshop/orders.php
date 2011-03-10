@@ -60,12 +60,12 @@ $data['orders'] = array();
 
 for($run=0; $run<$lanshop_loop; $run++) {
 
-	$data['orders'][$run]['id'] = $cs_lanshop[$run]['lanshop_orders_id'];
-	$data['orders'][$run]['articles_id'] = $cs_lanshop[$run]['lanshop_articles_id'];
-	$data['orders'][$run]['articles_name'] = cs_secure($cs_lanshop[$run]['lanshop_articles_name']);
-	$status = $cs_lanshop[$run]['lanshop_orders_status'];
-	$data['orders'][$run]['status'] = $cs_lang['status_' . $status];
-	$data['orders'][$run]['value'] = $cs_lanshop[$run]['lanshop_orders_value'];
+  $data['orders'][$run]['id'] = $cs_lanshop[$run]['lanshop_orders_id'];
+  $data['orders'][$run]['articles_id'] = $cs_lanshop[$run]['lanshop_articles_id'];
+  $data['orders'][$run]['articles_name'] = cs_secure($cs_lanshop[$run]['lanshop_articles_name']);
+  $status = $cs_lanshop[$run]['lanshop_orders_status'];
+  $data['orders'][$run]['status'] = $cs_lang['status_' . $status];
+  $data['orders'][$run]['value'] = $cs_lanshop[$run]['lanshop_orders_value'];
   $cost = $cs_lanshop[$run]['lanshop_articles_price'] * $cs_lanshop[$run]['lanshop_orders_value'];
   $data['orders'][$run]['cost'] = $cost / 100 . ' ' . $cs_lang['cost'];
   $rem_link = 'start=' . $start . '&amp;sort=' . $sort . '&amp;remove_id=' . $cs_lanshop[$run]['lanshop_orders_id'];

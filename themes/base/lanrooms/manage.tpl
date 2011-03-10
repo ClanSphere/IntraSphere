@@ -14,8 +14,8 @@
       <select name="lanpartys_id" >
         <option value="0">----</option>
         {loop:lan}
-		<option value="{lan:id}">{lan:name}</option>
-		{stop:lan}
+    <option value="{lan:id}">{lan:name}</option>
+    {stop:lan}
       </select>
       <input type="submit" name="submit" value="{lang:show}" />
     </fieldset>

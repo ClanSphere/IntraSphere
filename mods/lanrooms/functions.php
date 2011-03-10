@@ -40,16 +40,16 @@ function cs_lanroom($mod,$action,$lanrooms_id,$lanroomd_id = 0,$free = 0) {
     
     $data['max']['col'] = $max_col[0] +2;
     $data['img']['empty'] = cs_html_img('symbols/clansphere/empty.gif',12,12);
-	  
-	  $i = 0;
-	  $max_run = $max_col[0] * $max_row[0];
+    
+    $i = 0;
+    $max_run = $max_col[0] * $max_row[0];
     for($run = 0;$run < $max_run;$run++) {
-    	
-    	$data['numbers'][$run]['if']['max_col'] = FALSE;
+      
+      $data['numbers'][$run]['if']['max_col'] = FALSE;
       if($col == $max_col[0]) {
         $data['numbers'][$run]['if']['max_col'] = TRUE;
-      	$data['numbers'][$run]['123'] = ++$row;
-      	$data['numbers'][$run]['empty'] = cs_html_img('symbols/clansphere/empty.gif',12,12);;
+        $data['numbers'][$run]['123'] = ++$row;
+        $data['numbers'][$run]['empty'] = cs_html_img('symbols/clansphere/empty.gif',12,12);;
         $col = 0;
       }
       $col++;

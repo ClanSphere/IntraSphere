@@ -42,9 +42,9 @@ $lanshop_loop = count($data['articles']);
 
 for($run=0; $run<$lanshop_loop; $run++) {
 
-	$data['articles'][$run]['id'] = $data['articles'][$run]['lanshop_articles_id'];
-	$data['articles'][$run]['name'] = cs_secure($data['articles'][$run]['lanshop_articles_name']);
-	$data['articles'][$run]['price'] = $data['articles'][$run]['lanshop_articles_price'] / 100 . ' ' . $cs_lang['cost'];
+  $data['articles'][$run]['id'] = $data['articles'][$run]['lanshop_articles_id'];
+  $data['articles'][$run]['name'] = cs_secure($data['articles'][$run]['lanshop_articles_name']);
+  $data['articles'][$run]['price'] = $data['articles'][$run]['lanshop_articles_price'] / 100 . ' ' . $cs_lang['cost'];
 
 }
 

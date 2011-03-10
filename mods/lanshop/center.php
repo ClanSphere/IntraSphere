@@ -40,8 +40,8 @@ if(!empty($article) AND !empty($value)) {
   }
 }
 else {
-	$categories_id = empty($cs_get['where']) ? 0 : $cs_get['where'];
-	if (!empty($cs_post['where']))  $categories_id = $cs_post['where'];
+  $categories_id = empty($cs_get['where']) ? 0 : $cs_get['where'];
+  if (!empty($cs_post['where']))  $categories_id = $cs_post['where'];
 }
 
 $cs_sort[1] = 'lanshop_articles_name DESC';
@@ -72,7 +72,7 @@ for($run=0; $run<$lanshop_loop; $run++) {
 
   $data['articles'][$run]['id'] = $data['articles'][$run]['lanshop_articles_id'];
   $data['articles'][$run]['name'] = cs_secure($data['articles'][$run]['lanshop_articles_name']);
-	$data['articles'][$run]['price'] = $data['articles'][$run]['lanshop_articles_price'] / 100 . ' ' . $cs_lang['cost'];
+  $data['articles'][$run]['price'] = $data['articles'][$run]['lanshop_articles_price'] / 100 . ' ' . $cs_lang['cost'];
 }
 
 echo cs_subtemplate(__FILE__,$data,'lanshop','center');

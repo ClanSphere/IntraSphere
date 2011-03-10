@@ -27,7 +27,7 @@
 <br />
 <table class="forum" cellpadding="0" cellspacing="{page:cellspacing}" style="width:{page:width}">
   <tr>
-		<td class="leftc" style="width:140px">{icon:images} {lang:current}</td>
+    <td class="leftc" style="width:140px">{icon:images} {lang:current}</td>
     <td class="leftb">{lanpartys:img}</td>
   </tr>
 </table>

@@ -10,10 +10,10 @@
         <input type="hidden" name="id" value="{data:id}" />
         <input type="submit" name="submit" value="{lang:change}" />
       </form>
-	  <br />
-	  <br />
-	  {lanpartys:team_done}
-	  </td>
+    <br />
+    <br />
+    {lanpartys:team_done}
+    </td>
   </tr>
   <tr>
     <td class="leftc">{icon:status_unknown} {lang:status}</td>

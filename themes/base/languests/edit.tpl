@@ -13,9 +13,9 @@
       <td class="leftc">{icon:connect_to_network} {lang:lanparty} *</td>
       <td class="leftb"><select name="lanpartys_id" >
           <option value="0">----</option>
-		  {loop:lanpartys}
-		  <option value="{lanpartys:id}" {lanpartys:select}>{lanpartys:name}</option>
-		  {stop:lanpartys}
+      {loop:lanpartys}
+      <option value="{lanpartys:id}" {lanpartys:select}>{lanpartys:name}</option>
+      {stop:lanpartys}
         </select>
       </td>
     </tr>
