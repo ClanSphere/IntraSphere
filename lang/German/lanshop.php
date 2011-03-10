@@ -19,7 +19,7 @@ $cs_lang['money'] = 'Betrag';
 $cs_lang['cost'] = 'Euro';
 $cs_lang['pay'] = 'Zahlung';
 $cs_lang['money_all'] = 'Gesamtbetrag der Anfragen: %s Euro';
-$cs_lang['no_user_info'] = 'Zur Anzeige muss ein Benutzer ausgewählt werden';
+$cs_lang['no_user_info'] = 'Zur Anzeige muss ein Benutzer ausgew&auml;hlt werden';
 
 // Center
 $cs_lang['items_found'] = 'Gefundene Artikel: %s';

@@ -13,20 +13,29 @@
 <form method="post" id="lanshop_cashdesk" action="{url:lanshop_cashdesk}">
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
   <tr>
-    <td class="leftc">{lang:user}</td>
-    <td class="leftc">{lang:category}</td>
-    <td class="leftc">{lang:status}</td>
-    <td class="leftc">{lang:options}</td>
-  </tr>
-  <tr>
-    <td class="leftb">
-      {head:users_dropdown}
+    <td class="leftc">
+      {lang:category}
     </td>
     <td class="leftb">
       {head:cat_dropdown}
     </td>
+    <td class="leftc">
+      {lang:status}
+    </td>
     <td class="leftb">
       {head:status_dropdown}
+    </td>
+    <td class="leftc">
+      {lang:options}
+    </td>
+  </tr>
+  <tr>
+    <td class="leftc">
+      {lang:user}
+    </td>
+    <td class="leftb" colspan="3">
+      <input type="text" name="search_name" id="search_name" value="{search:name}" autocomplete="off" onkeyup="Clansphere.ajax.user_autocomplete('search_name', 'search_users_result', '{page:path}')" size="50" maxlength="100" />
+      <div id="search_users_result"></div>
     </td>
     <td class="leftb">
       <input type="submit" name="submit" value="{lang:show}" />
@@ -36,9 +45,9 @@
 </form>
 <br />
 
+{if:user}
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
   <tr>
-    <td class="headb">{lang:user}</td>
     <td class="headb">{lang:name}</td>
     <td class="headb" colspan="2">{lang:status}</td>
     <td class="headb" colspan="2">{lang:basket}</td>
@@ -46,7 +55,6 @@
   </tr>
   {loop:orders}
   <tr>
-    <td class="leftc">{orders:user}</td>
     <td class="leftc">{orders:article}</td>
     <td class="leftc">{orders:status}</td>
     <td class="leftc">{orders:pay_id}</td>
@@ -57,6 +65,7 @@
   {stop:orders}
 </table>
 <br />
+{stop:user}
 
 <table class="forum" style="width:{page:width}" cellpadding="0" cellspacing="{page:cellspacing}">
   <tr>
