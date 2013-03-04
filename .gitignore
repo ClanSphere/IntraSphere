@@ -1,9 +1,13 @@
-/*.patch
-/*.sqlite
+*.patch
+*.sqlite
 /.buildpath
 /.htaccess
 /.idea
 /.project
 /.settings
+/lighttpd.conf
+/nginx.conf
+/setup.php
+/setup*.php
 /web.config
 /nbproject
