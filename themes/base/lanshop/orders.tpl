@@ -29,7 +29,7 @@
   </tr>
   {loop:orders}
   <tr>
-    <td class="leftc"><a href="/debug/lanshop/view/id/1">{orders:articles_name}</a></td>
+    <td class="leftc"><a href="{url:lanshop_view:id={orders:articles_id}}">{orders:articles_name}</a></td>
     <td class="leftc">{orders:status}</td>
     <td class="rightc">{orders:value}</td>
     <td class="centerc">{orders:remove}</td>
