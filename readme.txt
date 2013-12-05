@@ -1,4 +1,4 @@
-intrasphere for clansphere 2010.3
+intrasphere for clansphere 2011.0
 ---------------------------------
 
 requirements:
@@ -23,5 +23,6 @@ please report any bugs you encounter and wishes at http://www.clansphere.net
 
 changelog:
 
+2011.0 - fixed a problem with a shop link
 2010.3 - updated intrasphere to be compatible with clansphere 2010.3
 2009.0 - updated intrasphere to be compatible with clansphere 2009.0

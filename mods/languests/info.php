@@ -5,8 +5,8 @@
 $cs_lang = cs_translate('languests');
 
 $mod_info['name']       = $cs_lang['mod_name'];
-$mod_info['version']    = '2010.3';
-$mod_info['released']   = '2011-03-10';
+$mod_info['version']    = '2011.0';
+$mod_info['released']   = '2013-12-06';
 $mod_info['creator']    = 'hajo';
 $mod_info['team']       = 'ClanSphere';
 $mod_info['url']        = 'www.clansphere.net';
